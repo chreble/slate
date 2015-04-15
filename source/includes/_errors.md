@@ -1,20 +1,22 @@
-# Errors
+# API common error codes
 
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
+The API has built-in standardized error messages and a specific code is returned when the API encounters any kind of error, could be validation error, data mismatch or unhandled exception.
 
-The Kittn API uses the following error codes:
-
+You'll find in the list below, the error codes common to all API services and specific service error codes will be found in the API documentation. 
 
 Error Code | Meaning
 ---------- | -------
-400 | Bad Request -- Your request sucks
-401 | Unauthorized -- Your API key is wrong
-403 | Forbidden -- The kitten requested is hidden for administrators only
-404 | Not Found -- The specified kitten could not be found
-405 | Method Not Allowed -- You tried to access a kitten with an invalid method
-406 | Not Acceptable -- You requested a format that isn't json
-410 | Gone -- The kitten requested has been removed from our servers
-418 | I'm a teapot
-429 | Too Many Requests -- You're requesting too many kittens! Slown down!
-500 | Internal Server Error -- We had a problem with our server. Try again later.
-503 | Service Unavailable -- We're temporarially offline for maintanance. Please try again later.
+0001 | Invalid Action
+0002 | Invalid Method `%s` expected `%s`
+0003 | Unhandled error `%s`
+0004 | Invalid Sub Account
+1001 | Required parameter `paymentMethod`
+1002 | Parameter `%s` can't be empty
+1003 | The parameter `%s` expects the exact value `%s`
+1004 | The parameter `%s` expects a specific length `%s`
+1005 | The parameter `%s` expects a specific format `%s`
+1006 | The parameter `%s` has an invalid value, expected `%s`
+1007 | Configuration error: `%s`
+1008 | Passwords don't match
+1009 | The parameter `%s` expects a valid email address
+4002 | CDN Provider error `%s`
