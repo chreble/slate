@@ -59,7 +59,7 @@ The consumer secret should be kept secret.
           <h1 id="featured">Featured</h1>
 
 <h2 id="get-a-specific-page">Get a specific Page</h2>
-<pre><code class="highlight shell">curl <span class="s2">"https://my.appstore.com/api/catalog/featured/page/key/darty-for-you/storeId/11/age/0-3"</span>
+<pre><code class="highlight shell">curl -XGET <span class="s2">"https://my.appstore.com/api/catalog/featured/page/key/darty-for-you/storeId/11/age/0-3"</span>
 </code></pre>
 
 <blockquote>
@@ -164,7 +164,7 @@ Using pages instead of blocks is very powerful since it allows to reorganise the
 </tbody></table>
 
 <h2 id="get-a-specific-block">Get a specific Block</h2>
-<pre><code class="highlight shell">curl <span class="s2">"https://my.appstore.com/api/catalog/featured/block/key/category-games/storeId/11/age/0-3"</span>
+<pre><code class="highlight shell">curl -XGET <span class="s2">"https://my.appstore.com/api/catalog/featured/block/key/category-games/storeId/11/age/0-3"</span>
 </code></pre>
 
 <blockquote>
@@ -248,7 +248,7 @@ Using pages instead of blocks is very powerful since it allows to reorganise the
           <h1 id="catalog">Catalog</h1>
 
 <h2 id="get-a-list-of-categories">Get a list of categories</h2>
-<pre><code class="highlight shell">curl <span class="s2">"https://my.appstore.com/api/catalog/category/list/storeId/11"</span>
+<pre><code class="highlight shell">curl -XGET <span class="s2">"https://my.appstore.com/api/catalog/category/list/storeId/11"</span>
 </code></pre>
 
 <blockquote>
@@ -315,7 +315,7 @@ Using pages instead of blocks is very powerful since it allows to reorganise the
 </tbody></table>
 
 <h2 id="get-applications-inside-category">Get applications inside category</h2>
-<pre><code class="highlight shell">curl <span class="s2">"https://my.appstore.com/api/catalog/category/index/categoryId/15/storeId/11"</span>
+<pre><code class="highlight shell">curl -XGET <span class="s2">"https://my.appstore.com/api/catalog/category/index/categoryId/15/storeId/11"</span>
 </code></pre>
 
 <blockquote>
@@ -360,6 +360,8 @@ Using pages instead of blocks is very powerful since it allows to reorganise the
 </span></code></pre>
 
 <p>This endpoint retrieves applications attached to a given category.</p>
+
+<aside class="warning">The Sourcing category is now always attached, it is up to the client to hide or show it.</aside>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -414,7 +416,7 @@ Using pages instead of blocks is very powerful since it allows to reorganise the
 </tbody></table>
 
 <h2 id="get-home-categories">Get home categories</h2>
-<pre><code class="highlight shell">curl <span class="s2">"https://my.appstore.com/api/catalog/category/home/storeId/11"</span>
+<pre><code class="highlight shell">curl -XGET <span class="s2">"https://my.appstore.com/api/catalog/category/home/storeId/11"</span>
 </code></pre>
 
 <blockquote>
@@ -538,7 +540,7 @@ Using pages instead of blocks is very powerful since it allows to reorganise the
 <aside class="warning">The `age` filter doesn&rsquo;t work, see [#110](https://github.com/NexwayGroup/N3-AppStore/issues/110).</aside>
 
 <h2 id="get-application-information">Get application information</h2>
-<pre><code class="highlight shell">curl <span class="s2">"https://my.appstore.com/api/catalog/product/app/sku/com.pepworks.ocean_memo_game/storeId/11"</span>
+<pre><code class="highlight shell">curl -XGET <span class="s2">"https://my.appstore.com/api/catalog/product/app/sku/com.pepworks.ocean_memo_game/storeId/11"</span>
 </code></pre>
 
 <blockquote>
@@ -607,7 +609,7 @@ Using pages instead of blocks is very powerful since it allows to reorganise the
 </tbody></table>
 
 <h2 id="get-in-app-item-information">Get in-app item information</h2>
-<pre><code class="highlight shell">curl <span class="s2">"https://my.appstore.com/api/catalog/product/item/sku/com.pepworks.ocean_memo_game/storeId/11"</span>
+<pre><code class="highlight shell">curl -XGET <span class="s2">"https://my.appstore.com/api/catalog/product/item/sku/com.pepworks.ocean_memo_game/storeId/11"</span>
 </code></pre>
 
 <blockquote>
@@ -641,6 +643,8 @@ Using pages instead of blocks is very powerful since it allows to reorganise the
 
 <p>This endpoint retrieves the detailed information about an in-app item.</p>
 
+<aside class="warning">The test mode is not available anymore.</aside>
+
 <h3 id="http-request">HTTP Request</h3>
 
 <p><code class="prettyprint">GET https://my.appstore.com/api/catalog/product/item/sku/com.pepworks.ocean_memo_game/storeId/11</code></p>
@@ -670,7 +674,7 @@ Using pages instead of blocks is very powerful since it allows to reorganise the
 </tbody></table>
 
 <h2 id="get-latest-version-of-app/item">Get latest version of app/item</h2>
-<pre><code class="highlight shell">curl <span class="s2">"https://my.appstore.com/api/catalog/product/version/index/skus/com.pepworks.ocean_memo_game/storeId/11"</span>
+<pre><code class="highlight shell">curl -XGET <span class="s2">"https://my.appstore.com/api/catalog/product/version/index/skus/com.pepworks.ocean_memo_game/storeId/11"</span>
 </code></pre>
 
 <blockquote>
@@ -710,7 +714,7 @@ Using pages instead of blocks is very powerful since it allows to reorganise the
 </tbody></table>
 
 <h2 id="search-application">Search Application</h2>
-<pre><code class="highlight shell">curl <span class="s2">"https://my.appstore.com/api/catalog/search/index/search/ginger/storeId/11"</span>
+<pre><code class="highlight shell">curl -XGET <span class="s2">"https://my.appstore.com/api/catalog/search/index/search/ginger/storeId/11"</span>
 </code></pre>
 
 <blockquote>
