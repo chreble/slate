@@ -395,8 +395,6 @@ curl -XGET "https://my.appstore.com/api/catalog/search/index/search/ginger/store
 
 This endpoint shows paginated search results which matches the given search string.
 
-<aside class="notice">This endpoint is particulary helpful if you need to compare the installed version to the latest one available.</aside>
-
 ### HTTP Request
 
 `GET https://my.appstore.com/api/catalog/search/index/search/ginger/storeId/11`
