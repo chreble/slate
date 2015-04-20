@@ -1,12 +1,18 @@
 ---
 title: N3 AppStore API Reference
 
-language_tabs:
-  - shell
-
 includes:
+  - home
   - featured
   - catalog
+  - review
+  - customer
+  - wishlist
+  - locale
+  - credit
+  - wallet
+  - purchase
+  - children
   - errors
 
 search: true
