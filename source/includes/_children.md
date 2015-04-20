@@ -2,12 +2,7 @@
 
 ## Get the children's wishlist
 
-```shell
-curl -X GET "https://my.appstore.com/api/wishlist/children" \
-    -H "Authorization: XXX"
-```
-
-> The above command returns JSON structured like this:
+> Response example
 
 ```json
 {
@@ -32,12 +27,7 @@ This endpoint retrieves the children's wishlist.
 
 ## Get the available payment methods
 
-```shell
-curl -X GET "https://my.appstore.com/api/payment/wallet/list" \
-    -H "Authorization: XXX"
-```
-
-> The above command returns JSON structured like this:
+> Response example
 
 ```json
 {
@@ -66,12 +56,7 @@ This endpoint retrieves the payment methods available to the children account.
 
 ## Get the available children credits
 
-```shell
-curl -X GET "https://my.appstore.com/api/payment/wallet/children/list" \
-    -H "Authorization: XXX"
-```
-
-> The above command returns JSON structured like this:
+> Response example
 
 ```json
 {

@@ -2,11 +2,7 @@
 
 ## Get a list of countries
 
-```shell
-curl -X GET "https://my.appstore.com/api/locale/country/list"
-```
-
-> The above command returns JSON structured like this:
+> Response example
 
 ```json
 {
@@ -36,11 +32,7 @@ This endpoint retrieves a list of countries.
 
 ## Get a list of regions
 
-```shell
-curl -X GET "https://my.appstore.com/api/locale/region/list/countryId/FR"
-```
-
-> The above command returns JSON structured like this:
+> Response example
 
 ```json
 {

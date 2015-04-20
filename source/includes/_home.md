@@ -2,11 +2,7 @@
 
 ## Get home categories
 
-```shell
-curl -X GET "https://my.appstore.com/api/catalog/category/home/storeId/11"
-```
-
-> The above command returns JSON structured like this:
+> Response example
 
 ```json
 {
@@ -92,4 +88,4 @@ age | no | all | If you want to filter the output by age range (ex. `0-3`, `3-`)
 compatibility | no | all | If you want to filter the output by device screen compatibility. Must be specified as: `4` = 4-inch, `7` = 7-inch, `10` = 10-inch (comma separated).
 nbItems | no | 10 | If you want to filter the output by device screen compatibility.
 
-<aside class="warning">The `age` filter doesn't work, see (#110)[https://github.com/NexwayGroup/N3-AppStore/issues/110].</aside>
+<aside class="warning">The age filter doesn't work, see on Github #110.</aside>

@@ -2,11 +2,7 @@
 
 ## Get a list of categories
 
-```shell
-curl -X GET "https://my.appstore.com/api/catalog/category/list/storeId/11"
-```
-
-> The above command returns JSON structured like this:
+> Response example
 
 ```json
 {
@@ -59,11 +55,7 @@ storeId | yes | none | The storeId defines many things, such as the currency, th
 
 ## Get applications inside category
 
-```shell
-curl -X GET "https://my.appstore.com/api/catalog/category/index/categoryId/15/storeId/11"
-```
-
-> The above command returns JSON structured like this:
+> Response example
 
 ```json
 {
@@ -125,11 +117,7 @@ page | no | 1 | If you want to filter the output by device screen compatibility.
 
 ## Get application information
 
-```shell
-curl -X GET "https://my.appstore.com/api/catalog/product/app/sku/com.pepworks.ocean_memo_game/storeId/11"
-```
-
-> The above command returns JSON structured like this:
+> Response example
 
 ```json
 {
@@ -179,11 +167,7 @@ sku | yes | none | The application SKU.
 
 ## Get in-app item information
 
-```shell
-curl -X GET "https://my.appstore.com/api/catalog/product/item/sku/com.pepworks.ocean_memo_game/storeId/11"
-```
-
-> The above command returns JSON structured like this:
+> Response example
 
 ```json
 {
@@ -229,11 +213,7 @@ sku | yes | none | The in-app item SKU.
 
 ## Get latest version of app/item
 
-```shell
-curl -X GET "https://my.appstore.com/api/catalog/product/version/index/skus/com.pepworks.ocean_memo_game/storeId/11"
-```
-
-> The above command returns JSON structured like this:
+> Response example
 
 ```json
 [{
@@ -259,11 +239,7 @@ skus | yes | none | A list of comma-separated skus.
 
 ## Search Application
 
-```shell
-curl -X GET "https://my.appstore.com/api/catalog/search/index/search/ginger/storeId/11"
-```
-
-> The above command returns JSON structured like this:
+> Response example
 
 ```json
 {

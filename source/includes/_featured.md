@@ -3,11 +3,7 @@
 
 ## Get a specific Page
 
-```shell
-curl -X GET "https://my.appstore.com/api/catalog/featured/page/key/darty-for-you/storeId/11/age/0-3"
-```
-
-> The above command returns JSON structured like this:
+> Response example
 
 ```json
 {
@@ -83,11 +79,7 @@ compatibility | no | all | If you want to filter the output by device screen com
 
 ## Get a specific Block
 
-```shell
-curl -X GET "https://my.appstore.com/api/catalog/featured/block/key/category-games/storeId/11/age/0-3"
-```
-
-> The above command returns JSON structured like this:
+> Response example
 
 ```json
 {

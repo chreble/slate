@@ -2,12 +2,7 @@
 
 ## Get a list of reviews
 
-```shell
-curl -X GET "https://my.appstore.com/api/review/list/sku/com.magmamobile.game.IceCream" \
-    -H "Authorization: XXX"
-```
-
-> The above command returns JSON structured like this:
+> Response example
 
 ```json
 {
@@ -47,14 +42,7 @@ page | no | 1 | If you want to filter the output by device screen compatibility.
 
 ## Submit a review
 
-```shell
-curl -X POST "https://my.appstore.com/api/review/submit" \
-    -H "Authorization: XXX" \
-    -H "Content-Type: application/json" \
-    -d "{\"sku\":\"com.example.app\",\"rating\":1.5,\"title\":\"Title of the review\",\"detail\":\"Your product is just amazing\",\"nickname\":\"Anonymous Guy\"}"
-```
-
-> The above command returns JSON structured like this:
+> Response example
 
 ```json
 {
@@ -74,7 +62,7 @@ This endpoint submits a review for the given product.
 
 `YES`
 
-### JSON Parameters
+### JSON Request Parameters
 
 Parameter | Mandatory | Default | Description
 --------- | --------- | ------- | -----------

@@ -2,12 +2,7 @@
 
 ## Get the wishlist
 
-```shell
-curl -X GET "https://my.appstore.com/api/wishlist/index"
-    -H "Authorization: XXX"
-```
-
-> The above command returns JSON structured like this:
+> Response example
 
 ```json
 {
@@ -62,14 +57,7 @@ This endpoint retrieves the customer's wishlist.
 
 ## Add a product in the wishlist
 
-```shell
-curl -X POST "https://my.appstore.com/api/wishlist/add" \
-    -H "Authorization: XXX" \
-    -H "Content-Type: application/json" \
-    -d "{\"sku\":\"com.example.app\"}"
-```
-
-> The above command returns JSON structured like this:
+> Response example
 
 ```json
 {
@@ -87,7 +75,7 @@ This endpoint adds a product to the customer's wishlist.
 
 `YES`
 
-### JSON Parameters
+### JSON Request Parameters
 
 Parameter | Mandatory | Default | Description
 --------- | --------- | ------- | -----------
@@ -95,14 +83,7 @@ sku | yes | none | The application SKU.
 
 ## Delete a product in the wishlist
 
-```shell
-curl -X POST "https://my.appstore.com/api/wishlist/delete" \
-    -H "Authorization: XXX" \
-    -H "Content-Type: application/json" \
-    -d "{\"sku\":\"com.example.app\"}"
-```
-
-> The above command returns JSON structured like this:
+> Response example
 
 ```json
 {
@@ -120,7 +101,7 @@ This endpoint deletes a product from the customer's wishlist.
 
 `YES`
 
-### JSON Parameters
+### JSON Request Parameters
 
 Parameter | Mandatory | Default | Description
 --------- | --------- | ------- | -----------

@@ -4,7 +4,7 @@ The API has built-in standardized error messages and a specific code is returned
 
 You'll find in the list below, the error codes common to all API services and specific service error codes will be found in the API documentation. 
 
-Error Code | Meaning
+Code | Meaning
 ---------- | -------
 0001 | Invalid Action
 0002 | Invalid Method `%s` expected `%s`

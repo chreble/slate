@@ -2,12 +2,7 @@
 
 ## Get the available credit packs
 
-```shell
-curl -X GET "https://my.appstore.com/api/payment/credit/list" \
-    -H "Authorization: XXX"
-```
-
-> The above command returns JSON structured like this:
+> Response example
 
 ```json
 {

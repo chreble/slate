@@ -12,6 +12,7 @@ includes:
   - credit
   - wallet
   - purchase
+  - terms
   - children
   - errors
 
@@ -26,7 +27,7 @@ Getting started with the Nexway API is easy. We have a great getting started gui
 
 # Authentication
 
-Nexway implements 2-legged OAuth 1.0a protocol as its authentication method against our API. For a detailed technical explanation of the RFC and how to implement inside your app, see http://oauth.net/core/1.0/.
+Nexway implements 2-legged OAuth 1.0a protocol as its authentication method against our API. For a detailed technical explanation of the RFC and how to implement inside your app, see `http://oauth.net/core/1.0/`.
 
 Any developer can request a consumer key and a consumer secret to start using our API's.
 
