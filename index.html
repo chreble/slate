@@ -11,11 +11,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
       <script src="javascripts/all.js" type="text/javascript"></script>
 
-      <script>
-        $(function() {
-          setupLanguages(["shell"]);
-        });
-      </script>
   </head>
 
   <body class="index">
@@ -27,9 +22,6 @@
     </a>
     <div class="tocify-wrapper">
       <img src="images/logo.png" />
-        <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-        </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
@@ -48,7 +40,7 @@
 
 <h1 id="authentication">Authentication</h1>
 
-<p>Nexway implements 2-legged OAuth 1.0a protocol as its authentication method against our API. For a detailed technical explanation of the RFC and how to implement inside your app, see http://oauth.net/core/1.0/.</p>
+<p>Nexway implements 2-legged OAuth 1.0a protocol as its authentication method against our API. For a detailed technical explanation of the RFC and how to implement inside your app, see <code class="prettyprint">http://oauth.net/core/1.0/</code>.</p>
 
 <p>Any developer can request a consumer key and a consumer secret to start using our API&rsquo;s.</p>
 
@@ -56,371 +48,12 @@
 The consumer secret should be kept secret.
 </aside>
 
-          <h1 id="featured">Featured</h1>
-
-<h2 id="get-a-specific-page">Get a specific Page</h2>
-<pre><code class="highlight shell">curl -XGET <span class="s2">"https://my.appstore.com/api/catalog/featured/page/key/darty-for-you/storeId/11/age/0-3"</span>
-</code></pre>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre><code class="highlight json"><span class="p">{</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Darty for you"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"darty-for-you"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"pageTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"blocks"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"66"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Top Sellers"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"representation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"air.com.generation5.petitours1"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Little Bear"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"priceFormatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23,61 krN"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">23.6118805</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"nbReviews"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"publisherName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Génération 5"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"An app developped by experts and endorsed by parents and teachers!\r\nLet your child experience a fun adventure with this early learning touch screen application for toddlers.\r\nAlong with Little Bear, who will accompany the child throughout the games, your baby will experiment with gestures, coordination and sound recognition.\r\nThe games help to develop use of the senses (sight, touch, hearing).\r\nIn a comforting countryside environment, in these four games your baby will:\r\n- discover which animal is hiding behind the screen.\r\n- go hunting for butterflies.\r\n- collect mushrooms and pick flowers.\r\n- recognize objects by the sounds they produce.\r\nAll activities are progressive and difficulty is tailored to each age group."</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"imageCarousel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/i/m/img_0060.png"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/1/1/114.png"</span><span class="w">
-        </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.bulkypix.asterix"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Asterix Megaslap"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"priceFormatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15,71 krN"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">15.7149305</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"nbReviews"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"publisherName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bulkypix"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"It’s 50 BC and the whole of Gaul is occupied by the Romans… The whole of it? Not quite! That’s because there is a village inhabited by indomitable Gauls that still continues to and always will resist the invader.\r\n\r\nMEGAPUNCH\r\nDrink your magic potion, fire up Asterix’s fist and send your Roman flying as far away as you can.\r\nTHEY’RE CRAZY THESE ROMANS\r\nUnlock more than 20 objects (helmet, cloak, helium, etc.) and characters (Obelix, Dogmatix and other legionaries) which will help send your Roman further and further away.\r\n\r\nTHE WORLD OF ASTERIX\r\nTravel through the most symbolic countries from the adventures of Asterix, from the Gaul village to Egypt via the Compendium Roman camp, Lutetia and, of course, Rome…and not forgetting the pirates, by Jove!\r\n\r\nSIMPLE AND FUN\r\nAsterix Megapunch is intended for Gauls of all ages. Fire up Asterix’s fist by twirling your finger before aiming it at your Roman to send him flying straightaway.\r\n\r\nCOLLECT THE ASTERIX CHARACTERS\r\nCollect the 30 Asterix character cards by picking them up during the levels or swapping them with your friends. Caesar will be happy to tell you their story.\r\n\r\nCHALLENGE YOUR FRIENDS\r\n- Take on your friends. Their records are depicted as Romans inflated with helium that you will encounter on your journey.\r\n"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"imageCarousel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/f/e/feature_anglais.jpg"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/i/c/ico_114x114.png"</span><span class="w">
-        </span><span class="p">}]</span><span class="w">
-    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"67"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"newest"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"representation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.magmamobile.game.RFR"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Retro Future Racing"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"priceFormatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"free"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"nbReviews"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"publisherName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Magma Mobile"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Racing sensation.\r\nBuckle up! You are in for quite a fabulous ride with Retro Future Racing. In this free 3D racing game, you will have the opportunity to drive amazing oldies cars in the most amazing futuristic parallel environment. Will you be able to reach maximum speed on each track?\r\nThis free car racing game includes a gorgeous selection of cars that you can upgrade with great boosts and custom options. The more you play, the more skills you will acquire and the more coins you will collect to make your ride the most beautiful and efficient of them all.\r\nThe game is packed with a wide variety of tracks that will challenge your driving skills. As the game progresses, you will have to be faster and faster and qualify to get a chance to compete against five others cars for the the #1 spot.\r\nThe game physics and dynamics offer an unbelievable sensation of speed. The music and sound effects included also play a big role in giving you a full car race experience. Packed with hours of fun, it will demand amazing skills to complete all the achievements included in the game.\r\nThe game is tablet ready"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/a/p/app_icon.png"</span><span class="w">
-        </span><span class="p">}]</span><span class="w">
-    </span><span class="p">}]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint retrieves the given page and the blocks it contains.<br>
-Using pages instead of blocks is very powerful since it allows to reorganise the whole content through Nexway&rsquo;s admin panel.</p>
-
-<h3 id="http-request">HTTP Request</h3>
-
-<p><code class="prettyprint">GET https://my.appstore.com/api/catalog/featured/page/key/appstore-page/storeId/11/age/0-3</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Mandatory</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>storeId</td>
-<td>yes</td>
-<td>none</td>
-<td>The storeId defines many things, such as the currency, the language, the availability.</td>
-</tr>
-<tr>
-<td>key</td>
-<td>yes</td>
-<td>none</td>
-<td>The featured page key.</td>
-</tr>
-<tr>
-<td>age</td>
-<td>no</td>
-<td>all</td>
-<td>If you want to filter the output by age range (ex. <code class="prettyprint">0-3</code>, <code class="prettyprint">3-</code>)</td>
-</tr>
-<tr>
-<td>compatibility</td>
-<td>no</td>
-<td>all</td>
-<td>If you want to filter the output by device screen compatibility. Must be specified as: <code class="prettyprint">4</code> = 4-inch, <code class="prettyprint">7</code> = 7-inch, <code class="prettyprint">10</code> = 10-inch (comma separated).</td>
-</tr>
-</tbody></table>
-
-<h2 id="get-a-specific-block">Get a specific Block</h2>
-<pre><code class="highlight shell">curl -XGET <span class="s2">"https://my.appstore.com/api/catalog/featured/block/key/category-games/storeId/11/age/0-3"</span>
-</code></pre>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre><code class="highlight json"><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Category games"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"category-games"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"representation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sk.inlogic.mania7x7"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7x7 Mania!"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"priceFormatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6,99 krN"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">6.99038014</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"nbReviews"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"publisherName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Inlogic Software"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Confectionery experiment gone wrong and jelly cubes are invading your kitchen! It's time to get rid of them. Move them around the table, connect them to form lines of the same color and make them disappear before they crowd the whole table. You can help yourself with features like undo and Move Anywhere. And, of course, there is an indicator of upcoming colors at your disposal. Do you have enough wit and concentration to make it to the higher level?\r\n"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"imageCarousel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/7/x/7x7mania_preview_1024x500_1.png"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/7/x/7x7mania_icon_512x512_1.png"</span><span class="w">
-    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.marbotic.ipad.dixdoigts"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10 fingers +"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"priceFormatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15,71 krN"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">15.7149305</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"nbReviews"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"publisherName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marbotic"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"★ Editor's Choice Award 2014 for Excellence in Design - Children's Technology Review\r\n★ 5 stars by theiphonemom : « I thought that by using multitouch, kids could really get a hands-on experience that would help them learn more efficiently. »\r\n★ 4,5/5 stars by BestAppsForKids : « Multitouch feature leads to unique way to help kids build their basic counting and addition skills. »\r\n★ Theimum gave it 4 stars : « This is a very useful digital tool that would complement any learning program involving concrete manipulatives. »\r\n\r\n-----------\r\n\r\nLearn how to count on your fingers by using Multitouch!\r\n\r\n10 fingers offers children an intuitive game so they can become familiar with numbers and numerals. Children can also begin having fun with addition.\r\n\r\nThis innovative app uses the multi-touch feature on the iPad screen. When the child puts 3 fingers onto the screen, the digit \"3\" displays, and the word \"three\" is pronounced.\r\n\r\nThis app is designed for children from 3 to 6 years old. Younger children may enjoy 10 fingers once they start counting \"1, 2, 3\".\r\n\r\nYour child can learn counting in 11 languages : English, French, German, Spanish, Italian...\r\n\r\n\"Free\" mode lets children explore at their own pace: What if I put all my fingers on the screen? What about two fingers from each hand?\r\n\"Challenge\" mode asks the child question, which must be answered by placing the right number of fingers onto the screen.\r\n\r\nThe app is inspired by Montessori pedagogy by promoting the acquisition of abstract concepts using concrete manipulation. A wooden number toy that interacts with the iPad can be used to play with the app and stimulate the child’s senses even further!\r\n\r\n10 fingers trains children in:\r\n-The concept of numbers and quantity\r\n-Visual and auditory recognition of numbers\r\n-The concept of addition\r\n-Motor skills\r\n\r\nThis app has no advertising or in-app purchases. Useful information can be found in a Parents’ Corner.\r\n\r\n10 Fingers is the first product from Marbotic, a publisher that designs and creates innovative educational solutions blending sensory material and digital interfaces."</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"imageCarousel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/b/a/banner_12_13.png"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/i/c/icon_20_11.png"</span><span class="w">
-    </span><span class="p">}]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint retrieves a specific block and the products associated to it.</p>
-
-<h3 id="http-request">HTTP Request</h3>
-
-<p><code class="prettyprint">GET https://my.appstore.com/api/catalog/featured/block/key/appstore-block/storeId/11/age/0-3</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Mandatory</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>storeId</td>
-<td>yes</td>
-<td>none</td>
-<td>The storeId defines many things, such as the currency, the language, the availability.</td>
-</tr>
-<tr>
-<td>key</td>
-<td>yes</td>
-<td>none</td>
-<td>The featured page key.</td>
-</tr>
-<tr>
-<td>age</td>
-<td>no</td>
-<td>all</td>
-<td>If you want to filter the output by age range (ex. <code class="prettyprint">0-3</code>, <code class="prettyprint">3-</code>)</td>
-</tr>
-<tr>
-<td>compatibility</td>
-<td>no</td>
-<td>all</td>
-<td>If you want to filter the output by device screen compatibility. Must be specified as: <code class="prettyprint">4</code> = 4-inch, <code class="prettyprint">7</code> = 7-inch, <code class="prettyprint">10</code> = 10-inch (comma separated).</td>
-</tr>
-</tbody></table>
-
-          <h1 id="catalog">Catalog</h1>
-
-<h2 id="get-a-list-of-categories">Get a list of categories</h2>
-<pre><code class="highlight shell">curl -XGET <span class="s2">"https://my.appstore.com/api/catalog/category/list/storeId/11"</span>
-</code></pre>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre><code class="highlight json"><span class="p">{</span><span class="w">
-    </span><span class="s2">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"3"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"categoryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bøker &amp; Tegneserier"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"subCats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"5"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"categoryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Childrens Books"</span><span class="w">
-                </span><span class="p">}</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"15"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"categoryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Utdanning"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"subCats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"16"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"categoryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Historikk"</span><span class="w">
-                </span><span class="p">},</span><span class="w">
-                </span><span class="s2">"17"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"categoryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Language (Spoken)"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"subCats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                        </span><span class="s2">"149"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                            </span><span class="s2">"categoryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">149</span><span class="p">,</span><span class="w">
-                            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Spanish"</span><span class="w">
-                        </span><span class="p">}</span><span class="w">
-                    </span><span class="p">}</span><span class="w">
-                </span><span class="p">}</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint retrieves the list of categories available for the given <code class="prettyprint">storeId</code>.  </p>
-
-<h3 id="http-request">HTTP Request</h3>
-
-<p><code class="prettyprint">GET https://my.appstore.com/api/catalog/category/list/storeId/11</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Mandatory</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>storeId</td>
-<td>yes</td>
-<td>none</td>
-<td>The storeId defines many things, such as the currency, the language, the availability.</td>
-</tr>
-</tbody></table>
-
-<h2 id="get-applications-inside-category">Get applications inside category</h2>
-<pre><code class="highlight shell">curl -XGET <span class="s2">"https://my.appstore.com/api/catalog/category/index/categoryId/15/storeId/11"</span>
-</code></pre>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre><code class="highlight json"><span class="p">{</span><span class="w">
-    </span><span class="s2">"apps"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-        </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.thup.lunchbox"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">" Monkey Preschool Lunchbox"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"priceFormatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15,71 krN"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">15.7149305</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/m/p/mpl_icon_114.png"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"nbReviews"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"publisherName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"THUP"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"versionCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"versionLabel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"gameRating"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"age"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.marbotic.ipad.dixdoigts"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10 fingers +"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"priceFormatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15,71 krN"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">15.7149305</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/i/c/icon_20_11.png"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"nbReviews"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"publisherName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marbotic"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"versionCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"versionLabel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.0.3"</span><span class="w">
-    </span><span class="p">}],</span><span class="w">
-    </span><span class="s2">"nbApps"</span><span class="p">:</span><span class="w"> </span><span class="mi">175</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"subCats"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-        </span><span class="s2">"categoryId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"68"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alfabetet"</span><span class="w">
-    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"categoryId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dyr"</span><span class="w">
-    </span><span class="p">}]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint retrieves applications attached to a given category.</p>
-
-<aside class="warning">The Sourcing category is now always attached, it is up to the client to hide or show it.</aside>
-
-<h3 id="http-request">HTTP Request</h3>
-
-<p><code class="prettyprint">GET https://my.appstore.com/api/catalog/category/index/categoryId/15/storeId/11</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Mandatory</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>storeId</td>
-<td>yes</td>
-<td>none</td>
-<td>The storeId defines many things, such as the currency, the language, the availability.</td>
-</tr>
-<tr>
-<td>categoryId</td>
-<td>yes</td>
-<td>none</td>
-<td>The category identifier.</td>
-</tr>
-<tr>
-<td>age</td>
-<td>no</td>
-<td>all</td>
-<td>If you want to filter the output by age range (ex. <code class="prettyprint">0-3</code>, <code class="prettyprint">3-</code>)</td>
-</tr>
-<tr>
-<td>compatibility</td>
-<td>no</td>
-<td>all</td>
-<td>If you want to filter the output by device screen compatibility. Must be specified as: <code class="prettyprint">4</code> = 4-inch, <code class="prettyprint">7</code> = 7-inch, <code class="prettyprint">10</code> = 10-inch (comma separated).</td>
-</tr>
-<tr>
-<td>nbItems</td>
-<td>no</td>
-<td>20</td>
-<td>If you want to filter the output by device screen compatibility.</td>
-</tr>
-<tr>
-<td>page</td>
-<td>no</td>
-<td>1</td>
-<td>If you want to filter the output by device screen compatibility.</td>
-</tr>
-</tbody></table>
+          <h1 id="home">Home</h1>
 
 <h2 id="get-home-categories">Get home categories</h2>
-<pre><code class="highlight shell">curl -XGET <span class="s2">"https://my.appstore.com/api/catalog/category/home/storeId/11"</span>
-</code></pre>
 
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Response example</p>
 </blockquote>
 <pre><code class="highlight json"><span class="p">{</span><span class="w">
     </span><span class="s2">"carousel"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
@@ -537,14 +170,363 @@ Using pages instead of blocks is very powerful since it allows to reorganise the
 </tr>
 </tbody></table>
 
-<aside class="warning">The `age` filter doesn&rsquo;t work, see [#110](https://github.com/NexwayGroup/N3-AppStore/issues/110).</aside>
+<aside class="warning">The age filter doesn&rsquo;t work, see on Github #110.</aside>
 
-<h2 id="get-application-information">Get application information</h2>
-<pre><code class="highlight shell">curl -XGET <span class="s2">"https://my.appstore.com/api/catalog/product/app/sku/com.pepworks.ocean_memo_game/storeId/11"</span>
-</code></pre>
+          <h1 id="featured">Featured</h1>
+
+<h2 id="get-a-specific-page">Get a specific Page</h2>
 
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Darty for you"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"darty-for-you"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"pageTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"blocks"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"66"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Top Sellers"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"representation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"air.com.generation5.petitours1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Little Bear"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"priceFormatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23,61 krN"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">23.6118805</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"nbReviews"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"publisherName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Génération 5"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"An app developped by experts and endorsed by parents and teachers!\r\nLet your child experience a fun adventure with this early learning touch screen application for toddlers.\r\nAlong with Little Bear, who will accompany the child throughout the games, your baby will experiment with gestures, coordination and sound recognition.\r\nThe games help to develop use of the senses (sight, touch, hearing).\r\nIn a comforting countryside environment, in these four games your baby will:\r\n- discover which animal is hiding behind the screen.\r\n- go hunting for butterflies.\r\n- collect mushrooms and pick flowers.\r\n- recognize objects by the sounds they produce.\r\nAll activities are progressive and difficulty is tailored to each age group."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"imageCarousel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/i/m/img_0060.png"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/1/1/114.png"</span><span class="w">
+        </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.bulkypix.asterix"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Asterix Megaslap"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"priceFormatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15,71 krN"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">15.7149305</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"nbReviews"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"publisherName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bulkypix"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"It’s 50 BC and the whole of Gaul is occupied by the Romans… The whole of it? Not quite! That’s because there is a village inhabited by indomitable Gauls that still continues to and always will resist the invader.\r\n\r\nMEGAPUNCH\r\nDrink your magic potion, fire up Asterix’s fist and send your Roman flying as far away as you can.\r\nTHEY’RE CRAZY THESE ROMANS\r\nUnlock more than 20 objects (helmet, cloak, helium, etc.) and characters (Obelix, Dogmatix and other legionaries) which will help send your Roman further and further away.\r\n\r\nTHE WORLD OF ASTERIX\r\nTravel through the most symbolic countries from the adventures of Asterix, from the Gaul village to Egypt via the Compendium Roman camp, Lutetia and, of course, Rome…and not forgetting the pirates, by Jove!\r\n\r\nSIMPLE AND FUN\r\nAsterix Megapunch is intended for Gauls of all ages. Fire up Asterix’s fist by twirling your finger before aiming it at your Roman to send him flying straightaway.\r\n\r\nCOLLECT THE ASTERIX CHARACTERS\r\nCollect the 30 Asterix character cards by picking them up during the levels or swapping them with your friends. Caesar will be happy to tell you their story.\r\n\r\nCHALLENGE YOUR FRIENDS\r\n- Take on your friends. Their records are depicted as Romans inflated with helium that you will encounter on your journey.\r\n"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"imageCarousel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/f/e/feature_anglais.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/i/c/ico_114x114.png"</span><span class="w">
+        </span><span class="p">}]</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"67"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"newest"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"representation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.magmamobile.game.RFR"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Retro Future Racing"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"priceFormatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"free"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"nbReviews"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"publisherName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Magma Mobile"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Racing sensation.\r\nBuckle up! You are in for quite a fabulous ride with Retro Future Racing. In this free 3D racing game, you will have the opportunity to drive amazing oldies cars in the most amazing futuristic parallel environment. Will you be able to reach maximum speed on each track?\r\nThis free car racing game includes a gorgeous selection of cars that you can upgrade with great boosts and custom options. The more you play, the more skills you will acquire and the more coins you will collect to make your ride the most beautiful and efficient of them all.\r\nThe game is packed with a wide variety of tracks that will challenge your driving skills. As the game progresses, you will have to be faster and faster and qualify to get a chance to compete against five others cars for the the #1 spot.\r\nThe game physics and dynamics offer an unbelievable sensation of speed. The music and sound effects included also play a big role in giving you a full car race experience. Packed with hours of fun, it will demand amazing skills to complete all the achievements included in the game.\r\nThe game is tablet ready"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/a/p/app_icon.png"</span><span class="w">
+        </span><span class="p">}]</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves the given page and the blocks it contains.<br>
+Using pages instead of blocks is very powerful since it allows to reorganise the whole content through Nexway&rsquo;s admin panel.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://my.appstore.com/api/catalog/featured/page/key/appstore-page/storeId/11/age/0-3</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>storeId</td>
+<td>yes</td>
+<td>none</td>
+<td>The storeId defines many things, such as the currency, the language, the availability.</td>
+</tr>
+<tr>
+<td>key</td>
+<td>yes</td>
+<td>none</td>
+<td>The featured page key.</td>
+</tr>
+<tr>
+<td>age</td>
+<td>no</td>
+<td>all</td>
+<td>If you want to filter the output by age range (ex. <code class="prettyprint">0-3</code>, <code class="prettyprint">3-</code>)</td>
+</tr>
+<tr>
+<td>compatibility</td>
+<td>no</td>
+<td>all</td>
+<td>If you want to filter the output by device screen compatibility. Must be specified as: <code class="prettyprint">4</code> = 4-inch, <code class="prettyprint">7</code> = 7-inch, <code class="prettyprint">10</code> = 10-inch (comma separated).</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-a-specific-block">Get a specific Block</h2>
+
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Category games"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"category-games"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"representation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sk.inlogic.mania7x7"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7x7 Mania!"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"priceFormatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6,99 krN"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">6.99038014</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nbReviews"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"publisherName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Inlogic Software"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Confectionery experiment gone wrong and jelly cubes are invading your kitchen! It's time to get rid of them. Move them around the table, connect them to form lines of the same color and make them disappear before they crowd the whole table. You can help yourself with features like undo and Move Anywhere. And, of course, there is an indicator of upcoming colors at your disposal. Do you have enough wit and concentration to make it to the higher level?\r\n"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"imageCarousel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/7/x/7x7mania_preview_1024x500_1.png"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/7/x/7x7mania_icon_512x512_1.png"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.marbotic.ipad.dixdoigts"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10 fingers +"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"priceFormatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15,71 krN"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">15.7149305</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nbReviews"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"publisherName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marbotic"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"★ Editor's Choice Award 2014 for Excellence in Design - Children's Technology Review\r\n★ 5 stars by theiphonemom : « I thought that by using multitouch, kids could really get a hands-on experience that would help them learn more efficiently. »\r\n★ 4,5/5 stars by BestAppsForKids : « Multitouch feature leads to unique way to help kids build their basic counting and addition skills. »\r\n★ Theimum gave it 4 stars : « This is a very useful digital tool that would complement any learning program involving concrete manipulatives. »\r\n\r\n-----------\r\n\r\nLearn how to count on your fingers by using Multitouch!\r\n\r\n10 fingers offers children an intuitive game so they can become familiar with numbers and numerals. Children can also begin having fun with addition.\r\n\r\nThis innovative app uses the multi-touch feature on the iPad screen. When the child puts 3 fingers onto the screen, the digit \"3\" displays, and the word \"three\" is pronounced.\r\n\r\nThis app is designed for children from 3 to 6 years old. Younger children may enjoy 10 fingers once they start counting \"1, 2, 3\".\r\n\r\nYour child can learn counting in 11 languages : English, French, German, Spanish, Italian...\r\n\r\n\"Free\" mode lets children explore at their own pace: What if I put all my fingers on the screen? What about two fingers from each hand?\r\n\"Challenge\" mode asks the child question, which must be answered by placing the right number of fingers onto the screen.\r\n\r\nThe app is inspired by Montessori pedagogy by promoting the acquisition of abstract concepts using concrete manipulation. A wooden number toy that interacts with the iPad can be used to play with the app and stimulate the child’s senses even further!\r\n\r\n10 fingers trains children in:\r\n-The concept of numbers and quantity\r\n-Visual and auditory recognition of numbers\r\n-The concept of addition\r\n-Motor skills\r\n\r\nThis app has no advertising or in-app purchases. Useful information can be found in a Parents’ Corner.\r\n\r\n10 Fingers is the first product from Marbotic, a publisher that designs and creates innovative educational solutions blending sensory material and digital interfaces."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"imageCarousel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/b/a/banner_12_13.png"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/i/c/icon_20_11.png"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves a specific block and the products associated to it.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://my.appstore.com/api/catalog/featured/block/key/appstore-block/storeId/11/age/0-3</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>storeId</td>
+<td>yes</td>
+<td>none</td>
+<td>The storeId defines many things, such as the currency, the language, the availability.</td>
+</tr>
+<tr>
+<td>key</td>
+<td>yes</td>
+<td>none</td>
+<td>The featured page key.</td>
+</tr>
+<tr>
+<td>age</td>
+<td>no</td>
+<td>all</td>
+<td>If you want to filter the output by age range (ex. <code class="prettyprint">0-3</code>, <code class="prettyprint">3-</code>)</td>
+</tr>
+<tr>
+<td>compatibility</td>
+<td>no</td>
+<td>all</td>
+<td>If you want to filter the output by device screen compatibility. Must be specified as: <code class="prettyprint">4</code> = 4-inch, <code class="prettyprint">7</code> = 7-inch, <code class="prettyprint">10</code> = 10-inch (comma separated).</td>
+</tr>
+</tbody></table>
+
+          <h1 id="catalog">Catalog</h1>
+
+<h2 id="get-a-list-of-categories">Get a list of categories</h2>
+
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"3"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"categoryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bøker &amp; Tegneserier"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"subCats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"5"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"categoryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Childrens Books"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"15"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"categoryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Utdanning"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"subCats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"16"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"categoryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Historikk"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"17"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"categoryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Language (Spoken)"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"subCats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"149"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="s2">"categoryId"</span><span class="p">:</span><span class="w"> </span><span class="mi">149</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Spanish"</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves the list of categories available for the given <code class="prettyprint">storeId</code>.  </p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://my.appstore.com/api/catalog/category/list/storeId/11</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>storeId</td>
+<td>yes</td>
+<td>none</td>
+<td>The storeId defines many things, such as the currency, the language, the availability.</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-applications-inside-category">Get applications inside category</h2>
+
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"apps"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.thup.lunchbox"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">" Monkey Preschool Lunchbox"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"priceFormatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15,71 krN"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">15.7149305</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/m/p/mpl_icon_114.png"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nbReviews"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"publisherName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"THUP"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"versionCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"versionLabel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"gameRating"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"age"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.marbotic.ipad.dixdoigts"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10 fingers +"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"priceFormatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15,71 krN"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">15.7149305</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://kurio.appstore.dev/media/catalog/product/i/c/icon_20_11.png"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nbReviews"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"publisherName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marbotic"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"versionCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"versionLabel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.0.3"</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">"nbApps"</span><span class="p">:</span><span class="w"> </span><span class="mi">175</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"subCats"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">"categoryId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"68"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alfabetet"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"categoryId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dyr"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves applications attached to a given category.</p>
+
+<aside class="warning">The Sourcing category is now always attached, it is up to the client to hide or show it.</aside>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://my.appstore.com/api/catalog/category/index/categoryId/15/storeId/11</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>storeId</td>
+<td>yes</td>
+<td>none</td>
+<td>The storeId defines many things, such as the currency, the language, the availability.</td>
+</tr>
+<tr>
+<td>categoryId</td>
+<td>yes</td>
+<td>none</td>
+<td>The category identifier.</td>
+</tr>
+<tr>
+<td>age</td>
+<td>no</td>
+<td>all</td>
+<td>If you want to filter the output by age range (ex. <code class="prettyprint">0-3</code>, <code class="prettyprint">3-</code>)</td>
+</tr>
+<tr>
+<td>compatibility</td>
+<td>no</td>
+<td>all</td>
+<td>If you want to filter the output by device screen compatibility. Must be specified as: <code class="prettyprint">4</code> = 4-inch, <code class="prettyprint">7</code> = 7-inch, <code class="prettyprint">10</code> = 10-inch (comma separated).</td>
+</tr>
+<tr>
+<td>nbItems</td>
+<td>no</td>
+<td>20</td>
+<td>If you want to filter the output by device screen compatibility.</td>
+</tr>
+<tr>
+<td>page</td>
+<td>no</td>
+<td>1</td>
+<td>If you want to filter the output by device screen compatibility.</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-application-information">Get application information</h2>
+
+<blockquote>
+<p>Response example</p>
 </blockquote>
 <pre><code class="highlight json"><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2602"</span><span class="p">,</span><span class="w">
@@ -609,11 +591,9 @@ Using pages instead of blocks is very powerful since it allows to reorganise the
 </tbody></table>
 
 <h2 id="get-in-app-item-information">Get in-app item information</h2>
-<pre><code class="highlight shell">curl -XGET <span class="s2">"https://my.appstore.com/api/catalog/product/item/sku/com.pepworks.ocean_memo_game/storeId/11"</span>
-</code></pre>
 
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Response example</p>
 </blockquote>
 <pre><code class="highlight json"><span class="p">{</span><span class="w">
     </span><span class="s2">"appName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Wonderful App !"</span><span class="p">,</span><span class="w">
@@ -674,11 +654,9 @@ Using pages instead of blocks is very powerful since it allows to reorganise the
 </tbody></table>
 
 <h2 id="get-latest-version-of-app/item">Get latest version of app/item</h2>
-<pre><code class="highlight shell">curl -XGET <span class="s2">"https://my.appstore.com/api/catalog/product/version/index/skus/com.pepworks.ocean_memo_game/storeId/11"</span>
-</code></pre>
 
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Response example</p>
 </blockquote>
 <pre><code class="highlight json"><span class="p">[{</span><span class="w">
     </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.pepworks.ocean_memo_game"</span><span class="p">,</span><span class="w">
@@ -714,11 +692,9 @@ Using pages instead of blocks is very powerful since it allows to reorganise the
 </tbody></table>
 
 <h2 id="search-application">Search Application</h2>
-<pre><code class="highlight shell">curl -XGET <span class="s2">"https://my.appstore.com/api/catalog/search/index/search/ginger/storeId/11"</span>
-</code></pre>
 
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Response example</p>
 </blockquote>
 <pre><code class="highlight json"><span class="p">{</span><span class="w">
     </span><span class="s2">"apps"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
@@ -807,6 +783,1147 @@ Using pages instead of blocks is very powerful since it allows to reorganise the
 </tr>
 </tbody></table>
 
+          <h1 id="review">Review</h1>
+
+<h2 id="get-a-list-of-reviews">Get a list of reviews</h2>
+
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"reviews"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"love"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"detail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"it flickers sometimes\nI love this game"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nickname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kaylee"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"27/01/2015"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"awsome "</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"detail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"its so much fun and its totally FREE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nickname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Liz Valenzuela"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"27/01/2015"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves a list of reviews for the given product.  </p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://my.appstore.com/api/review/list/sku/com.magmamobile.game.IceCream</code></p>
+
+<h3 id="auth-required">Auth Required</h3>
+
+<p><code class="prettyprint">YES</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>sku</td>
+<td>yes</td>
+<td>none</td>
+<td>The application SKU.</td>
+</tr>
+<tr>
+<td>nbItems</td>
+<td>no</td>
+<td>10</td>
+<td>If you want to filter the output by device screen compatibility.</td>
+</tr>
+<tr>
+<td>page</td>
+<td>no</td>
+<td>1</td>
+<td>If you want to filter the output by device screen compatibility.</td>
+</tr>
+</tbody></table>
+
+<h2 id="submit-a-review">Submit a review</h2>
+
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint submits a review for the given product.</p>
+
+<aside class="notice">The review must be manually approved in the AppStore admin panel.</aside>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST https://my.appstore.com/api/review/submit</code></p>
+
+<h3 id="auth-required">Auth Required</h3>
+
+<p><code class="prettyprint">YES</code></p>
+
+<h3 id="json-request-parameters">JSON Request Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>sku</td>
+<td>yes</td>
+<td>none</td>
+<td>The application SKU.</td>
+</tr>
+<tr>
+<td>rating</td>
+<td>yes</td>
+<td>none</td>
+<td>From 1 to 5.</td>
+</tr>
+<tr>
+<td>title</td>
+<td>yes</td>
+<td>none</td>
+<td>The review title.</td>
+</tr>
+<tr>
+<td>detail</td>
+<td>yes</td>
+<td>none</td>
+<td>The review description.</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td>yes</td>
+<td>none</td>
+<td>The user nickname.</td>
+</tr>
+</tbody></table>
+
+          <h1 id="customer">Customer</h1>
+
+          <h1 id="wishlist">Wishlist</h1>
+
+<h2 id="get-the-wishlist">Get the wishlist</h2>
+
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"apps"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.magmamobile.game.IceCream"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ice Cream"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Do you like to indulge? Well we have a treat for you. The most delicious Ice Cream game is now available on your mobile phone. You fingers won’t be able to resist it. 
+
+            As a proud owner of an Ice Cream Stand,
+        your job is to prepare the most intricate ice cream cones in a record time.Disappointing customer is no option
+        for the future of your business.Take orders and make them happen as fast as possible.The more customers you look after,
+        the more intricate the orders will be.
+
+        Your memory skills will be challenged all throughout the game.Also,
+        as you progress through this fun game,
+        you will unlock new ingredients making levels harder and harder to complete.Do you think you are ready to keep up with such intense pace ?
+
+        With the global leaderboard,
+        you will be competing against other players all over the world.Can you make it to the top and be crowned the best Ice Cream Parlor in the world ?
+
+        Ice Cream is a free game
+        for adults and children alike
+
+        Features :
+        -Over 100 Levels of increasing difficulty - Tons of flavors and toppings to choose from - Over 30 achievements to unlock - Global Leaderboard - The Game is Tablet ready and supports over 15 + Languages
+
+        Don’ t wait
+        for summer time,
+        change up your mind now with Ice Cream!"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EUR"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"priceFormatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"free"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"publisherName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Magma Mobile"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nbReviews"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"medias"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://darty.appstore.dev/media/catalog/product/a/p/app_icon_2.png"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves the customer&rsquo;s wishlist.  </p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://my.appstore.com/api/wishlist/index</code></p>
+
+<h3 id="auth-required">Auth Required</h3>
+
+<p><code class="prettyprint">YES</code></p>
+
+<h2 id="add-a-product-in-the-wishlist">Add a product in the wishlist</h2>
+
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint adds a product to the customer&rsquo;s wishlist.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST https://my.appstore.com/api/wishlist/add</code></p>
+
+<h3 id="auth-required">Auth Required</h3>
+
+<p><code class="prettyprint">YES</code></p>
+
+<h3 id="json-request-parameters">JSON Request Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>sku</td>
+<td>yes</td>
+<td>none</td>
+<td>The application SKU.</td>
+</tr>
+</tbody></table>
+
+<h2 id="delete-a-product-in-the-wishlist">Delete a product in the wishlist</h2>
+
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint deletes a product from the customer&rsquo;s wishlist.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST https://my.appstore.com/api/wishlist/delete</code></p>
+
+<h3 id="auth-required">Auth Required</h3>
+
+<p><code class="prettyprint">YES</code></p>
+
+<h3 id="json-request-parameters">JSON Request Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>sku</td>
+<td>yes</td>
+<td>none</td>
+<td>The application SKU.</td>
+</tr>
+</tbody></table>
+
+          <h1 id="locale">Locale</h1>
+
+<h2 id="get-a-list-of-countries">Get a list of countries</h2>
+
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"countries"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">"countryId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"États-Unis"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"iso2Code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"iso3Code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USA"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"isRegionRequired"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"countryId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GB"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Royaume-Uni"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"iso2Code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GB"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"iso3Code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GBR"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"isRegionRequired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EURO"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves a list of countries.  </p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://my.appstore.com/api/locale/country/list</code></p>
+
+<h2 id="get-a-list-of-regions">Get a list of regions</h2>
+
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"regions"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"182"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ain"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"183"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aisne"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves a list of regions available on the given country.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://my.appstore.com/api/locale/region/list/countryId/FR</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>countryId</td>
+<td>yes</td>
+<td>none</td>
+<td>The country formatted in two letters, ex. FR, PL.</td>
+</tr>
+</tbody></table>
+
+          <h1 id="credit">Credit</h1>
+
+<h2 id="get-the-available-credit-packs">Get the available credit packs</h2>
+
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"packs"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"piggy-pack-1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"formatedPrice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$10.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"currencySymbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Piggy Pack 1"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"piggy-pack-2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"formatedPrice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$30.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"currencySymbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Piggy Pack 2"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"piggy-pack-3"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"formatedPrice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$50.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"currencySymbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Piggy Pack 3"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves the available credit packs.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://my.appstore.com/api/payment/credit/list</code></p>
+
+<h3 id="auth-required">Auth Required</h3>
+
+<p><code class="prettyprint">YES</code></p>
+
+<h2 id="recharge-credit">Recharge credit</h2>
+
+<blockquote>
+<p>Add credit to balance using a credit card</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"piggy-pack-1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"42"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"paymentDetails"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"paymentMethod"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WorldPay/visa"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ccEncryptedData"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yP7dHxEid8DYrjrOafmk7Tbz69LuiPemL.."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ccEncryptionToken"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a9488248-2dc9-4cfd-b048-26b5c316c431"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>Add credit to balance using an agreement ID</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"piggy-pack-1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"42"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"agreementId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aad0d7d8-df0b-11e2-acf0-de50000001ff"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"complete"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"orderId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100000188"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"orderDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20130702 05:35:03"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"creditInfo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Customer Credit"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"balance"</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"balanceFormatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$60.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"balanceCurrency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint recharges credit using a regular or saved payment method.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST https://my.appstore.com/api/payment/credit/add</code></p>
+
+<h3 id="auth-required">Auth Required</h3>
+
+<p><code class="prettyprint">YES</code></p>
+
+          <h1 id="wallet">Wallet</h1>
+<pre><code class="highlight java"><span class="n">key</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="na">replaceAll</span><span class="o">(</span><span class="s">"-----BEGIN PUBLIC KEY-----"</span><span class="o">,</span> <span class="s">""</span><span class="o">);</span>
+<span class="n">key</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="na">replaceAll</span><span class="o">(</span><span class="s">"-----END PUBLIC KEY-----"</span><span class="o">,</span> <span class="s">""</span><span class="o">);</span>
+
+<span class="n">Security</span><span class="o">.</span><span class="na">addProvider</span><span class="o">(</span><span class="k">new</span> <span class="n">org</span><span class="o">.</span><span class="na">bouncycastle</span><span class="o">.</span><span class="na">jce</span><span class="o">.</span><span class="na">provider</span><span class="o">.</span><span class="na">BouncyCastleProvider</span><span class="o">());</span>
+<span class="n">BASE64Encoder</span> <span class="n">b64e</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BASE64Encoder</span><span class="o">();</span>
+<span class="n">BASE64Decoder</span> <span class="n">b64d</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BASE64Decoder</span><span class="o">();</span>
+<span class="n">AsymmetricKeyParameter</span> <span class="n">publicKey</span> <span class="o">=</span> 
+    <span class="o">(</span><span class="n">AsymmetricKeyParameter</span><span class="o">)</span> <span class="n">PublicKeyFactory</span><span class="o">.</span><span class="na">createKey</span><span class="o">(</span><span class="n">b64d</span><span class="o">.</span><span class="na">decodeBuffer</span><span class="o">(</span><span class="n">key</span><span class="o">));</span>
+
+<span class="n">AsymmetricBlockCipher</span> <span class="n">e</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RSAEngine</span><span class="o">();</span>
+<span class="n">e</span> <span class="o">=</span> <span class="k">new</span> <span class="n">org</span><span class="o">.</span><span class="na">bouncycastle</span><span class="o">.</span><span class="na">crypto</span><span class="o">.</span><span class="na">encodings</span><span class="o">.</span><span class="na">PKCS1Encoding</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
+<span class="n">e</span><span class="o">.</span><span class="na">init</span><span class="o">(</span><span class="kc">true</span><span class="o">,</span> <span class="n">publicKey</span><span class="o">);</span>
+
+<span class="n">String</span> <span class="n">result</span> <span class="o">=</span> <span class="n">b64e</span><span class="o">.</span><span class="na">encode</span><span class="o">(</span><span class="n">input</span><span class="o">.</span><span class="na">getBytes</span><span class="o">());</span>
+
+<span class="kt">byte</span><span class="o">[]</span> <span class="n">messageBytes</span> <span class="o">=</span> <span class="n">b64e</span><span class="o">.</span><span class="na">encode</span><span class="o">(</span><span class="n">input</span><span class="o">.</span><span class="na">getBytes</span><span class="o">()).</span><span class="na">getBytes</span><span class="o">();</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">result</span><span class="o">);</span>
+<span class="kt">byte</span><span class="o">[]</span> <span class="n">hexEncodedCipher</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="na">processBlock</span><span class="o">(</span><span class="n">messageBytes</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">messageBytes</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
+
+<span class="n">String</span> <span class="n">output</span> <span class="o">=</span> <span class="n">b64e</span><span class="o">.</span><span class="na">encode</span><span class="o">(</span><span class="n">hexEncodedCipher</span><span class="o">);</span>
+</code></pre>
+
+<blockquote>
+<p>Example (using PHP)</p>
+</blockquote>
+<pre><code class="highlight php"><span class="cp">&lt;?php</span>
+<span class="nv">$data</span> <span class="o">=</span> <span class="nb">base64_encode</span><span class="p">(</span><span class="nb">http_build_query</span><span class="p">(</span><span class="nv">$data</span><span class="p">));</span>
+
+<span class="nb">openssl_public_encrypt</span><span class="p">(</span><span class="nv">$data</span><span class="p">,</span> <span class="nv">$encrypted</span><span class="p">,</span> <span class="nv">$encryptionKey</span><span class="p">);</span>
+<span class="nv">$ccEncryptedData</span> <span class="o">=</span> <span class="nb">base64_encode</span><span class="p">(</span><span class="nv">$encrypted</span><span class="p">);</span>
+<span class="cp">?&gt;</span>
+</code></pre>
+
+<h2 id="notes-on-encryption">Notes on encryption</h2>
+
+<p>The PCI-DSS rules implies that every client or server APIs that use directly or indirectly our payment gateway, SHALL never send the credit card data in their raw form to our servers (including RAM due to a form post). If not, then the PCI-DSS applies to the implementer with all it involves (PCI data standards covers network security, operating system patches, code quality and liability and so on).</p>
+
+<h3 id="how-to">How-To</h3>
+
+<blockquote>
+<p>Example (in Java using BouncyCastle)</p>
+</blockquote>
+
+<p>You have to generate a query string with the following parameters:</p>
+
+<p>Required</p>
+
+<ul>
+<li>ccNumber : (string) Credit card number (19 digits max)</li>
+<li>ccExpirationMonth : (string) Month representation on two digits (use zerofill ex: &ldquo;09&rdquo;).</li>
+<li>ccExpirationYear : (string) Year representation on four digits (ex: &ldquo;2015&rdquo;).</li>
+<li>ccCvv: (string) Card verification value (4 digits max)</li>
+</ul>
+
+<p>Not required</p>
+
+<ul>
+<li>ccIssueNumber: (string) Card issue number - Ask only for MAESTRO card (2 digits max)</li>
+<li>ccStartDate: (string) Card start date - Ask only for MAESTRO card (MM/YYYY)
+Ex: <code class="prettyprint">ccNumber=4111111111111111&amp;ccExpirationMonth=12&amp;ccExpirationYear=2015&amp;ccCvv=000</code>
+Base64 encode the result
+Encrypt the base64 encoded string using the RSA public key
+Base64 encode the binary result and pass it to ccEncryptedData.</li>
+</ul>
+
+<h2 id="get-the-available-payment-methods">Get the available payment methods</h2>
+
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"agreements"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">"agreementId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b2dba034-ce06-4560-81eb-9e0150a8767e"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"agreementLabel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visa"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"isCreditCard"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ccType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visa"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ccBin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"414720**********"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ccExpirationDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11/2017"</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">"methods"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">"isCreditCard"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visa"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visa"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Atos/visa"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"canSaveToWallet"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"isCreditCard"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"American Express"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"amex"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Atos/amex"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"canSaveToWallet"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">"credit"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Customer Credit"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"balance"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"balanceFormatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0,00 €"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"balanceCurrency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EUR"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves the agreements (saved methods) as well as available methods for payment.<br>
+The response may differ depending of the customer type.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://my.appstore.com/api/payment/wallet/list</code></p>
+
+<h3 id="auth-required">Auth Required</h3>
+
+<p><code class="prettyprint">YES</code></p>
+
+<h2 id="add-a-new-agreement-in-the-wallet">Add a new agreement in the wallet</h2>
+
+<blockquote>
+<p>Request example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"paymentDetails"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"paymentMethod"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WorldPay/visa"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ccEncryptedData"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yP7dHxEid8DYrjrOafmk7Tbz69LuiPemL+GdKo6KeBaOuyNKj1Z5gJy4/ktrckITATZEzBgnf3...."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ccEncryptionToken"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a9488248-2dc9-4cfd-b048-26b5c316c431"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ccIssuerId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"511237"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ccExpirationDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11/2014"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"isDefault"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"billingAgreementId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1de769eb-961f-490f-92dc-f172e272330a"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint adds a new agreement (saved payment method) in the wallet.</p>
+
+<aside class="notice">When you want to pass credit card data to the API you have to use encryption.</aside>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST https://my.appstore.com/api/payment/wallet/add</code></p>
+
+<h3 id="auth-required">Auth Required</h3>
+
+<p><code class="prettyprint">YES</code></p>
+
+<h3 id="json-request-parameters">JSON Request Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>paymentMethod</td>
+<td>yes</td>
+<td>none</td>
+<td>The payment method name.</td>
+</tr>
+<tr>
+<td>ccEncryptedData</td>
+<td>yes</td>
+<td>none</td>
+<td>The credit card encrypted data.</td>
+</tr>
+<tr>
+<td>ccEncryptionToken</td>
+<td>yes</td>
+<td>none</td>
+<td>The encryption token.</td>
+</tr>
+<tr>
+<td>ccIssuerId</td>
+<td>yes</td>
+<td>none</td>
+<td>The credit card issuer ID.</td>
+</tr>
+<tr>
+<td>ccExpirationDate</td>
+<td>yes</td>
+<td>none</td>
+<td>The credit card expiration date.</td>
+</tr>
+<tr>
+<td>isDefault</td>
+<td>yes</td>
+<td>0</td>
+<td>The user nickname.</td>
+</tr>
+</tbody></table>
+
+<h2 id="delete-an-agreement-from-the-wallet">Delete an agreement from the wallet</h2>
+
+<blockquote>
+<p>Request example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"billingAgreementId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1de769eb-961f-490f-92dc-f172e272330a"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"billingAgreementId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1de769eb-961f-490f-92dc-f172e272330a"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint deletes an agreement (saved payment method) from the wallet.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST https://my.appstore.com/api/payment/wallet/delete</code></p>
+
+<h3 id="auth-required">Auth Required</h3>
+
+<p><code class="prettyprint">YES</code></p>
+
+          <h1 id="purchase">Purchase</h1>
+
+<h2 id="get-a-payment-token">Get a payment token</h2>
+
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f48a9c38-2e25-4957-9a27-dfabbaa59957"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"publicKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-----BEGIN PUBLIC KEY-----
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy3WpP9 / hD3sxUeTr6ZMx + hxE9IoUapaEjE5Yo + GxbQqATKfNHjjKMtYzDiSrlxJYHD7FompVZpMT204beu3m
+    4 t1EbPsMp2 / pYa64kflb5hBfWS6tdDczETh0ibeKwLRb2asE8tPRqZlt9M024Pv9
+    2 jlCb76hHaDXEHV1PsDObPO7Mq6JFxE01zXgMg6YfIw / 22 Jiv7 / 58 oC5emu2NegK
+    0 Q60T + mAlW70nkMtlMSOFChQ8w72hFLnm + TEALW4ITyih3jFH5IZFAOi1MtuaYHK
+    oVgYLqNN3fQ++ygDAIs965fSqTBiSg1GwLoozskOvD4XCupL6S3JxxrM4lspHAtv
+    KQIDAQAB
+    -- -- - END PUBLIC KEY-- -- -
+    "</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>The PCI-DSS rules implies that every client or server APIs that use directly or indirectly our payment gateway, SHALL never send the credit card data in their raw form to our servers (including RAM due to a form post). If not, then the PCI-DSS applies to the implementer with all it involves (PCI data standards covers network security, operating system patches, code quality and liability and so on).</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://my.appstore.com/api/payment/token/get</code></p>
+
+<h3 id="auth-required">Auth Required</h3>
+
+<p><code class="prettyprint">YES</code></p>
+
+<h3 id="response-parameters">Response Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>token</td>
+<td>string</td>
+<td>Encryption token (to be passed to the purchase API when using cc).</td>
+</tr>
+<tr>
+<td>publicKey</td>
+<td>string</td>
+<td>RSA public key to be used for cc data encryption (details below).</td>
+</tr>
+</tbody></table>
+
+<h2 id="purchase-an-item">Purchase an item</h2>
+
+<blockquote>
+<p>Pay with an existing agreement (saved method)</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.sample.myapp"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"agreementId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b7ed35d2-b72f-11e2-91b1-de50000001ff"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>Pay with an existing agreement (saved method) + Password verification</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.sample.myapp"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"agreementId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b7ed35d2-b72f-11e2-91b1-de50000001ff"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mypassword"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>Pay with customer credit (piggy bank)</p>
+</blockquote>
+
+<aside class="warning">When you want to purchase an item using the customer credit, balance must be positive.</aside>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.sample.myapp"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"useCredit"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>Pay with a credit card (initial purchase)</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.sample.myapp"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"paymentDetails"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"paymentMethod"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WorldPay/visa"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ccEncryptedData"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yP7dHxEid8DYrjrOafmk7Tbz69LuiPemL+GdKo6KeBaOuyNKj1Z5gJy4/ktrckITATZEzBgnf3Cb
+        NIFyxqMdfQF + H5keuX29Yyqax1wwjyXvjObD2yZUIF3l4BargE9xPRmEeA3qpWP + ddjDd9njVgbU
+        Qd / UtvjNfBqnaUVj90ZZ2RtB6wFytvGcxIo0ovuUeKfaJiB4T2trFmH6nHaz1NImz80jkLXbbYYU
+        f6Xa7AlUDL9UKMLnmtB5gYwt0EBxMqVviD / zKK3 + xioZWCPU5RXm / 5 oNuTWsWqa64KVHP0q83J70
+        zwmwerrUmUGLLSzz1UNIOK9m4w88op3R / qgKtg == "</span><span class="w">
+        </span><span class="s2">",
+        "</span><span class="err">ccEncryptionToken</span><span class="s2">": "</span><span class="err">a</span><span class="mi">9488248-2</span><span class="err">dc</span><span class="mi">9-4</span><span class="err">cfd-b</span><span class="mi">048-26</span><span class="err">b</span><span class="mi">5</span><span class="err">c</span><span class="mi">316</span><span class="err">c</span><span class="mi">431</span><span class="err">"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>Pay with a credit card (initial purchase + saving the method in the wallet)</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"sku"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.sample.myapp"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"paymentDetails"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"paymentMethod"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WorldPay/visa"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ccEncryptedData"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yP7dHxEid8DYrjrOafmk7Tbz69LuiPemL+GdKo6KeBaOuyNKj1Z5gJy4/ktrckITATZEzBgnf3Cb
+        NIFyxqMdfQF + H5keuX29Yyqax1wwjyXvjObD2yZUIF3l4BargE9xPRmEeA3qpWP + ddjDd9njVgbU
+        Qd / UtvjNfBqnaUVj90ZZ2RtB6wFytvGcxIo0ovuUeKfaJiB4T2trFmH6nHaz1NImz80jkLXbbYYU
+        f6Xa7AlUDL9UKMLnmtB5gYwt0EBxMqVviD / zKK3 + xioZWCPU5RXm / 5 oNuTWsWqa64KVHP0q83J70
+        zwmwerrUmUGLLSzz1UNIOK9m4w88op3R / qgKtg == "</span><span class="w">
+        </span><span class="s2">",
+        "</span><span class="err">ccEncryptionToken</span><span class="s2">": "</span><span class="err">a</span><span class="mi">9488248-2</span><span class="err">dc</span><span class="mi">9-4</span><span class="err">cfd-b</span><span class="mi">048-26</span><span class="err">b</span><span class="mi">5</span><span class="err">c</span><span class="mi">316</span><span class="err">c</span><span class="mi">431</span><span class="err">"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"orderId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"432157674"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"orderDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20130610 12:02:35"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint handles purchases.  </p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://my.appstore.com/api/payment/token/get</code></p>
+
+<h3 id="auth-required">Auth Required</h3>
+
+<p><code class="prettyprint">YES</code></p>
+
+<h3 id="json-request-parameters">JSON Request Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>sku</td>
+<td>yes</td>
+<td>none</td>
+<td>The item or application.</td>
+</tr>
+<tr>
+<td>useCredit</td>
+<td>yes</td>
+<td>true</td>
+<td>To pay using internal credit balance.</td>
+</tr>
+<tr>
+<td>agreementId</td>
+<td>no</td>
+<td>none</td>
+<td>The wallet agreementId. If blank the paymentDetails node must be set.</td>
+</tr>
+<tr>
+<td>password</td>
+<td>no</td>
+<td>none</td>
+<td>User&rsquo;s store password (password is checked only when using agreementId).</td>
+</tr>
+<tr>
+<td>paymentDetails.paymentMethod</td>
+<td>no</td>
+<td>none</td>
+<td>Payment method to use (returned by the wallet in &ldquo;paymentMethods&rdquo; array).</td>
+</tr>
+<tr>
+<td>paymentDetails.ccEncryptionToken</td>
+<td>no</td>
+<td>none</td>
+<td>The credit card encryption token.</td>
+</tr>
+<tr>
+<td>paymentDetails.ccEncryptedData</td>
+<td>no</td>
+<td>none</td>
+<td>The credit card holder data (encrypted with the RSA public key) see below for details.</td>
+</tr>
+<tr>
+<td>paymentDetails.addToWallet</td>
+<td>no</td>
+<td>none</td>
+<td>If true the credit card (or an other compatible method) will be added in the wallet.</td>
+</tr>
+<tr>
+<td>paymentDetails.ccIssuerId</td>
+<td>no</td>
+<td>none</td>
+<td>Encryption token (to be passed to the purchase API when using cc). If addToWallet is enabled, and if method is a credit card this field is required, first 6 digits of the card.</td>
+</tr>
+<tr>
+<td>paymentDetails.ccExpirationDate</td>
+<td>no</td>
+<td>none</td>
+<td>Encryption token (to be passed to the purchase API when using cc). If addToWallet is enabled, and if method is a credit card this field is required, (MM/YYYY).</td>
+</tr>
+</tbody></table>
+
+<h3 id="response-parameters">Response Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>success</td>
+<td>boolean</td>
+<td>If the purchase went well or not.</td>
+</tr>
+<tr>
+<td>message</td>
+<td>string</td>
+<td>A message which explains if an error occurred.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>string</td>
+<td>With possible statuses: <code class="prettyprint">complete</code>, <code class="prettyprint">processing</code>, <code class="prettyprint">fraud</code>.</td>
+</tr>
+<tr>
+<td>orderId</td>
+<td>string</td>
+<td>Unique Order identifier</td>
+</tr>
+<tr>
+<td>orderDate</td>
+<td>string</td>
+<td>Transaction date.</td>
+</tr>
+</tbody></table>
+
+<h3 id="possible-errors">Possible errors</h3>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>7000</td>
+<td>Invalid Agreement ID</td>
+</tr>
+<tr>
+<td>7001</td>
+<td>Missing either <code class="prettyprint">agreementId</code>, <code class="prettyprint">paymentDetails</code> or <code class="prettyprint">useCredit</code> parameter</td>
+</tr>
+<tr>
+<td>7002</td>
+<td>Invalid SKU</td>
+</tr>
+<tr>
+<td>7003</td>
+<td>No Billing Address found</td>
+</tr>
+<tr>
+<td>7005</td>
+<td>Unknown payment method</td>
+</tr>
+<tr>
+<td>7006</td>
+<td>Payment unavailable</td>
+</tr>
+<tr>
+<td>7007</td>
+<td>Unavailable payment method</td>
+</tr>
+<tr>
+<td>7008</td>
+<td>Cannot decrypt request with the given encryption key/data</td>
+</tr>
+<tr>
+<td>7009</td>
+<td>Invalid password</td>
+</tr>
+<tr>
+<td>7010</td>
+<td>Payment declined <code class="prettyprint">%s</code></td>
+</tr>
+<tr>
+<td>7011</td>
+<td>Multiple payment methods passed (Please pass only one)</td>
+</tr>
+<tr>
+<td>7012</td>
+<td>Empty balance</td>
+</tr>
+<tr>
+<td>7013</td>
+<td>Cannot fulfill credit balance with credit method</td>
+</tr>
+<tr>
+<td>7023</td>
+<td>Credit balance is too low to complete purchase</td>
+</tr>
+<tr>
+<td>7999</td>
+<td>Unhandled error <code class="prettyprint">%s</code></td>
+</tr>
+</tbody></table>
+
+          <h1 id="terms-and-conditions">Terms and conditions</h1>
+
+<h2 id="get-the-terms-and-conditions">Get the terms and conditions</h2>
+
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"checkboxText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I accept the terms and conditions"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;b&gt;Chapter 1&lt;/b&gt;asdasdasdasda asdasd asd asd asd asdads asd asd asdasdasd teythrr ertert."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>The Terms and Conditions API provides a bridge to Magento&rsquo;s Terms and conditions manager (under Sales).</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://my.appstore.com/api/terms/index</code></p>
+
+<h3 id="auth-required">Auth Required</h3>
+
+<p><code class="prettyprint">YES</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>storeId</td>
+<td>yes</td>
+<td>none</td>
+<td>The storeId defines many things, such as the currency, the language, the availability.</td>
+</tr>
+</tbody></table>
+
+<h3 id="response-parameters">Response Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>success</td>
+<td>boolean</td>
+<td>If the purchase went well or not.</td>
+</tr>
+<tr>
+<td>checkboxText</td>
+<td>string</td>
+<td>Acceptation text ex. &ldquo;I accept the Terms and conditions&rdquo;.</td>
+</tr>
+<tr>
+<td>content</td>
+<td>string (html)</td>
+<td>Terms and conditions.</td>
+</tr>
+</tbody></table>
+
+          <h1 id="children">Children</h1>
+
+<h2 id="get-the-children&#39;s-wishlist">Get the children&rsquo;s wishlist</h2>
+
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"children"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Matt"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"dob"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2006-08-01"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1139684"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves the children&rsquo;s wishlist.  </p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://my.appstore.com/api/wishlist/children</code></p>
+
+<h3 id="auth-required">Auth Required</h3>
+
+<p><code class="prettyprint">YES</code></p>
+
+<h2 id="get-the-available-payment-methods">Get the available payment methods</h2>
+
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"credit"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Customer Credit"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"balance"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.96</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"balanceFormatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$4.96"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"balanceCurrency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ceilingType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"daily"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ceilingValue"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ceilingValueFormatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$25.00"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves the payment methods available to the children account.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://my.appstore.com/api/payment/wallet/list</code></p>
+
+<h3 id="auth-required">Auth Required</h3>
+
+<p><code class="prettyprint">YES</code></p>
+
+<h2 id="get-the-available-children-credits">Get the available children credits</h2>
+
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"children"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Victor"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"dob"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2007-05-06"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3529"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Customer Credit"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"balance"</span><span class="p">:</span><span class="w"> </span><span class="mf">395.82707925</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"balanceFormatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"€395.83"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"balanceCurrency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EUR"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Eléonore"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"dob"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2005-11-14"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3532"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Customer Credit"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"balance"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.52280315</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"balanceFormatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"€5.52"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"balanceCurrency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EUR"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves the children credits.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://my.appstore.com/api/payment/wallet/children/list</code></p>
+
+<h3 id="auth-required">Auth Required</h3>
+
+<p><code class="prettyprint">YES</code></p>
+
           <h1 id="api-common-error-codes">API common error codes</h1>
 
 <p>The API has built-in standardized error messages and a specific code is returned when the API encounters any kind of error, could be validation error, data mismatch or unhandled exception.</p>
@@ -815,7 +1932,7 @@ Using pages instead of blocks is very powerful since it allows to reorganise the
 
 <table><thead>
 <tr>
-<th>Error Code</th>
+<th>Code</th>
 <th>Meaning</th>
 </tr>
 </thead><tbody>
@@ -879,9 +1996,6 @@ Using pages instead of blocks is very powerful since it allows to reorganise the
 
       </div>
       <div class="dark-box">
-          <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-          </div>
       </div>
     </div>
   </body>
