@@ -2,8 +2,6 @@
 
 ## Get a payment token
 
-The PCI-DSS rules implies that every client or server APIs that use directly or indirectly our payment gateway, SHALL never send the credit card data in their raw form to our servers (including RAM due to a form post). If not, then the PCI-DSS applies to the implementer with all it involves (PCI data standards covers network security, operating system patches, code quality and liability and so on).
-
 > Response example
 
 ```json
@@ -21,7 +19,7 @@ The PCI-DSS rules implies that every client or server APIs that use directly or 
 }
 ```
 
-This endpoint retrieves the children's wishlist.  
+The PCI-DSS rules implies that every client or server APIs that use directly or indirectly our payment gateway, SHALL never send the credit card data in their raw form to our servers (including RAM due to a form post). If not, then the PCI-DSS applies to the implementer with all it involves (PCI data standards covers network security, operating system patches, code quality and liability and so on).
 
 ### HTTP Request
 
@@ -31,7 +29,7 @@ This endpoint retrieves the children's wishlist.
 
 `YES`
 
-### Response parameters
+### Response Parameters
 
 Parameter | Type | Description
 --------- | ---- | -----------
@@ -119,7 +117,7 @@ publicKey | string | RSA public key to be used for cc data encryption (details b
 }
 ```
 
-This endpoint retrieves the children's wishlist.  
+This endpoint handles purchases.  
 
 ### HTTP Request
 
@@ -144,7 +142,7 @@ paymentDetails.addToWallet | no | none | If true the credit card (or an other co
 paymentDetails.ccIssuerId | no | none | Encryption token (to be passed to the purchase API when using cc). If addToWallet is enabled, and if method is a credit card this field is required, first 6 digits of the card.
 paymentDetails.ccExpirationDate | no | none | Encryption token (to be passed to the purchase API when using cc). If addToWallet is enabled, and if method is a credit card this field is required, (MM/YYYY).
 
-### Response parameters
+### Response Parameters
 
 Parameter | Type | Description
 --------- | ---- | -----------
