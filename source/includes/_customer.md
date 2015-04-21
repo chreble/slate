@@ -317,3 +317,73 @@ Code | Meaning
 ---- | -------
 1008 | Passwords don't match
 3008 | Current password does not match entered one
+
+## List of bought apps
+
+> Response example
+
+```json
+{
+    "apps": [{
+        "sku": "com.thumbstar.fatty",
+        "name": "Fatty",
+        "priceFormatted": "$1.99",
+        "price": 1.99,
+        "currency": "USD",
+        "packageName": "com.thumbstar.fatty",
+        "apk": "http:\/\/cdn.mobile.nexway.com\/com.thumbstar.fatty-1000005-enc.apk",
+        "apkEncrypted": true,
+        "version": "1000005",
+        "publisherName": "Thumbstar",
+        "rating": 0,
+        "nbReviews": 0,
+        "versionCode": 1000005,
+        "versionLabel": "1.0.5",
+        "order": {
+            "orderId": "600127801",
+            "orderDate": "20140731 15:49:20",
+            "orderTimestamp": 1406821760
+        },
+        "medias": {
+            "image": "https:\/\/appstore.appstore.dev\/media\/catalog\/product\/i\/c\/icon114x114_1.png"
+        },
+        "gameRating": {
+            "age": "3"
+        },
+        "apkHashMac": "2571f0a5a0b847fa3ac7aa2a1841605b67cc3882"
+    }, {
+        "sku": "net.int13.shogun",
+        "name": "Shogun",
+        "priceFormatted": "$1.99",
+        "price": 1.99,
+        "currency": "USD",
+        "packageName": "net.int13.shogun",
+        "apk": "http:\/\/cdn.mobile.nexway.com\/net.int13.shogun-1213-enc.apk",
+        "apkEncrypted": true,
+        "version": "1213",
+        "publisherName": "Thumbstar",
+        "rating": 0,
+        "nbReviews": 0,
+        "versionCode": 1213,
+        "versionLabel": "1.2.13",
+        "order": {
+            "orderId": "600127800",
+            "orderDate": "20140731 15:46:50",
+            "orderTimestamp": 1406821610
+        },
+        "medias": {
+            "image": "https:\/\/appstore.appstore.dev\/media\/catalog\/product\/s\/h\/shogun_114.png"
+        },
+        "gameRating": {
+            "age": "3"
+        },
+        "apkHashMac": "de85162fb0f69a3a36e271dbca3bc3b53832b324"
+    }]
+}
+```
+
+This endpoint retrieves the bought apps.
+
+### HTTP Request
+
+`POST https://my.appstore.com/api/account/apps`
