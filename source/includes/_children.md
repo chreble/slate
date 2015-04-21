@@ -170,6 +170,10 @@ This endpoint retrieves the child account details.
 
 `GET https://my.appstore.com/api/child/account`
 
+### Auth Required
+
+`YES`
+
 ### Query Parameters
 
 Parameter | Mandatory | Default | Description
@@ -281,6 +285,10 @@ This endpoint updates a child account.
 ### HTTP Request
 
 `POST https://my.appstore.com/api/child/update`
+
+### Auth Required
+
+`YES`
 
 ## Configure the piggy bank
 

@@ -399,3 +399,7 @@ This endpoint retrieves the bought apps.
 ### HTTP Request
 
 `GET https://my.appstore.com/api/account/apps`
+
+### Auth Required
+
+`YES`
