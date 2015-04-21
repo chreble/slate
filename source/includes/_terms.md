@@ -18,10 +18,6 @@ The Terms and Conditions API provides a bridge to Magento's Terms and conditions
 
 `GET https://my.appstore.com/api/terms/index`
 
-### Auth Required
-
-`YES`
-
 ### Query Parameters
 
 Parameter | Mandatory | Default | Description
