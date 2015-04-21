@@ -214,6 +214,10 @@ This endpoint updates the customer details.
 
 `POST https://my.appstore.com/api/account/update`
 
+### Auth Required
+
+`YES`
+
 ### JSON Request Parameters
 
 Parameter | Mandatory | Default | Description
@@ -264,6 +268,10 @@ This endpoint generates a temporary password which is sent by email to the custo
 
 `POST https://my.appstore.com/api/account/password/reset`
 
+### Auth Required
+
+`YES`
+
 ### Possible errors
 
 Code | Meaning
@@ -296,6 +304,10 @@ This endpoint updates the account password by the given one.
 ### HTTP Request
 
 `POST https://my.appstore.com/api/account/password/new`
+tu
+### Auth Required
+
+`YES`
 
 ### JSON Request Parameters
 
@@ -386,4 +398,4 @@ This endpoint retrieves the bought apps.
 
 ### HTTP Request
 
-`POST https://my.appstore.com/api/account/apps`
+`GET https://my.appstore.com/api/account/apps`
