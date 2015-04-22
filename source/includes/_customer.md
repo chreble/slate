@@ -58,7 +58,7 @@ passwordConfirmation | yes | none | Password confirmation.
 firstname | yes | none | Customer firstname.
 lastname | yes | none | Customer lastname.
 optinNewsletter | no | none | Newsletter subscription flag.
-optinSms | yes | no | The user nickname.
+optinSms | no | none | The user nickname.
 billingAddress.street | yes | none | Address.
 billingAddress.street2 | no | none | Complementary address.
 billingAddress.city | yes | none | City.
