@@ -52,18 +52,18 @@ This endpoint registers a new master account, the consumer & access token are al
 Parameter | Mandatory | Default | Description
 --------- | --------- | ------- | -----------
 email | yes | none | The customer username.
-dob | yes | none | Date of birth, ISO 8601 international date format YYYY-MM-DD.
+dob | no | none | Date of birth, ISO 8601 international date format YYYY-MM-DD.
 password | yes | none | Customer password.
 passwordConfirmation | yes | none | Password confirmation.
 firstname | yes | none | Customer firstname.
 lastname | yes | none | Customer lastname.
 optinNewsletter | no | none | Newsletter subscription flag.
 optinSms | no | none | The user nickname.
-billingAddress.street | yes | none | Address.
+billingAddress.street | no | none | Address.
 billingAddress.street2 | no | none | Complementary address.
-billingAddress.city | yes | none | City.
-billingAddress.countryId | yes | none | Country ID.
-billingAddress.postCode | yes | none | Zip code.
+billingAddress.city | no | none | City.
+billingAddress.countryId | no | none | Country ID.
+billingAddress.postCode | no | none | Zip code.
 billingAddress.region | no | none | Region code.
 billingAddress.telephone | no | none | Phone number.
 
