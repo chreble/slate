@@ -7,91 +7,48 @@
 
 ```json
 {
-    "id":"8",
-    "name":"Accueil",
-    "key":"acer-home",
-    "options":{
-        "pageSubtitle":"Bienvenue sur l'appstore Acer !"
+    "id": "8",
+    "name": "Accueil",
+    "key": "acer-home",
+    "options": {
+        "pageSubtitle": "Bienvenue sur l'appstore Acer !"
     },
-    "blocks":[
-        {
-            "id":"28",
-            "name":"Top Jeux action",
-            "key":"top-jeux-action",
-            "representation":"highlights",
-            "options":{
-                "quantityLimit":5,
-                "showMore":true,
-                "showMoreLimit":20
-            },
-            "products":[
-                {
-                    "type":"app",
-                    "sku":"com.cravecreative.eastereggjump",
-                    "name":"Easter Egg Jump",
-                    "priceFormatted":"\u20ac0.99",
-                    "price":0.9899635446,
-                    "rating":0,
-                    "nbReviews":0,
-                    "publisherName":"Crave Creative",
-                    "shortDescription":"Guide the baby chick over the Easter eggs to boost him upward.\r\n",
-                    "imageCarousel":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/e\/a\/easter-egg-jump-1024x500.png",
-                    "icon":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/e\/a\/easter-egg-jump-icon-512.png"
-                },
-                {
-                    "type":"app",
-                    "sku":"org.jymc.spacegame.FeedTheFishy",
-                    "name":"Feed The Fishy",
-                    "priceFormatted":"\u20ac0.91",
-                    "price":0.91304631,
-                    "rating":0,
-                    "nbReviews":0,
-                    "publisherName":"Mobile Streams",
-                    "shortDescription":"This a very addictive game, the whole purpose is to help the fishy swim from one point to the other. Energy gets reduced, so you need to eat smaller fishes and other items to boost your energy level.",
-                    "imageCarousel":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/t\/i\/title_1_30.png",
-                    "icon":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/i\/c\/icon_30_1_12.png"
-                },
-                {
-                    "type":"app",
-                    "sku":"com.jarbull.streetball",
-                    "name":"Streetball Shootout",
-                    "priceFormatted":"\u20ac0.91",
-                    "price":0.91304631,
-                    "rating":0,
-                    "nbReviews":0,
-                    "publisherName":"Spoiled Milk Limited",
-                    "shortDescription":"Hit the streets instantly and test your basketball skills on the urban courts in STREETBALL SHOOTOUT! Try to score as many shots as you can without missing and try to be the streetball master.",
-                    "icon":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/c\/o\/collateral_action_1_productCode_10667_id_15_w_110_h_110_name_wap-110x110_3.jpg"
-                },
-                {
-                    "type":"app",
-                    "sku":"com.dotemu.rtype",
-                    "name":"R-TYPE",
-                    "priceFormatted":"\u20ac1.79",
-                    "price":1.7900319021,
-                    "rating":0,
-                    "nbReviews":0,
-                    "publisherName":"DotEmu",
-                    "shortDescription":"Let's go back in the 80's with this classic old-school shoot'em up! One of the biggest arcade game will make you travel back in the day. Be ready to have fun with this old-school side-shooter game!",
-                    "imageCarousel":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/s\/c\/screenshot1_5_4.jpg",
-                    "icon":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/2\/0\/2015-02-05_14-37-35.png"
-                },
-                {
-                    "type":"app",
-                    "sku":"org.ArmyDelivery",
-                    "name":"Army Delivery Files",
-                    "priceFormatted":"\u20ac0.91",
-                    "price":0.91304631,
-                    "rating":0,
-                    "nbReviews":0,
-                    "publisherName":"Mobile Streams",
-                    "shortDescription":"Are you ready for the ultimate gaming experience?\r\nAs soon as you download Army Physics Adventure game you will be amazed how much fun it is. \r\nThis is an amazing forever fun game boosted with secret levels and thrilling packed updates. \r\nCan the world bravest soldier succeed on his mission? This adventure game is all about soldier missions. \r\nLt. Gomez is his name, be ready!",
-                    "imageCarousel":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/b\/a\/banner_14_1_3.png",
-                    "icon":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/i\/c\/icon_27_51.png"
-                }
-            ]
-        }
-    ]
+    "blocks": [{
+        "id": "28",
+        "name": "Top Jeux action",
+        "key": "top-jeux-action",
+        "representation": "highlights",
+        "options": {
+            "quantityLimit": 5,
+            "showMore": true,
+            "showMoreLimit": 20
+        },
+        "products": [{
+            "type": "app",
+            "sku": "com.cravecreative.eastereggjump",
+            "name": "Easter Egg Jump",
+            "priceFormatted": "\u20ac0.99",
+            "price": 0.9899635446,
+            "rating": 0,
+            "nbReviews": 0,
+            "publisherName": "Crave Creative",
+            "shortDescription": "Guide the baby chick over the Easter eggs to boost him upward.\r\n",
+            "imageCarousel": "http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/e\/a\/easter-egg-jump-1024x500.png",
+            "icon": "http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/e\/a\/easter-egg-jump-icon-512.png"
+        }, {
+            "type": "app",
+            "sku": "org.jymc.spacegame.FeedTheFishy",
+            "name": "Feed The Fishy",
+            "priceFormatted": "\u20ac0.91",
+            "price": 0.91304631,
+            "rating": 0,
+            "nbReviews": 0,
+            "publisherName": "Mobile Streams",
+            "shortDescription": "This a very addictive game, the whole purpose is to help the fishy swim from one point to the other. Energy gets reduced, so you need to eat smaller fishes and other items to boost your energy level.",
+            "imageCarousel": "http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/t\/i\/title_1_30.png",
+            "icon": "http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/i\/c\/icon_30_1_12.png"
+        }]
+    }]
 }
 ```
 
@@ -118,81 +75,40 @@ compatibility | no | all | If you want to filter the output by device screen com
 
 ```json
 {
-    "id":"28",
-    "name":"Top Jeux action",
-    "key":"top-jeux-action",
-    "representation":"highlights",
-    "options":{
-        "quantityLimit":5,
-        "showMore":true,
-        "showMoreLimit":20
+    "id": "28",
+    "name": "Top Jeux action",
+    "key": "top-jeux-action",
+    "representation": "highlights",
+    "options": {
+        "quantityLimit": 5,
+        "showMore": true,
+        "showMoreLimit": 20
     },
-    "products":[
-        {
-            "type":"app",
-            "sku":"com.cravecreative.eastereggjump",
-            "name":"Easter Egg Jump",
-            "priceFormatted":"\u20ac0.99",
-            "price":0.9899635446,
-            "rating":0,
-            "nbReviews":0,
-            "publisherName":"Crave Creative",
-            "shortDescription":"Guide the baby chick over the Easter eggs to boost him upward.\r\n",
-            "imageCarousel":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/e\/a\/easter-egg-jump-1024x500.png",
-            "icon":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/e\/a\/easter-egg-jump-icon-512.png"
-        },
-        {
-            "type":"app",
-            "sku":"org.jymc.spacegame.FeedTheFishy",
-            "name":"Feed The Fishy",
-            "priceFormatted":"\u20ac0.91",
-            "price":0.91304631,
-            "rating":0,
-            "nbReviews":0,
-            "publisherName":"Mobile Streams",
-            "shortDescription":"This a very addictive game, the whole purpose is to help the fishy swim from one point to the other. Energy gets reduced, so you need to eat smaller fishes and other items to boost your energy level.",
-            "imageCarousel":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/t\/i\/title_1_30.png",
-            "icon":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/i\/c\/icon_30_1_12.png"
-        },
-        {
-            "type":"app",
-            "sku":"com.jarbull.streetball",
-            "name":"Streetball Shootout",
-            "priceFormatted":"\u20ac0.91",
-            "price":0.91304631,
-            "rating":0,
-            "nbReviews":0,
-            "publisherName":"Spoiled Milk Limited",
-            "shortDescription":"Hit the streets instantly and test your basketball skills on the urban courts in STREETBALL SHOOTOUT! Try to score as many shots as you can without missing and try to be the streetball master.",
-            "icon":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/c\/o\/collateral_action_1_productCode_10667_id_15_w_110_h_110_name_wap-110x110_3.jpg"
-        },
-        {
-            "type":"app",
-            "sku":"com.dotemu.rtype",
-            "name":"R-TYPE",
-            "priceFormatted":"\u20ac1.79",
-            "price":1.7900319021,
-            "rating":0,
-            "nbReviews":0,
-            "publisherName":"DotEmu",
-            "shortDescription":"Let's go back in the 80's with this classic old-school shoot'em up! One of the biggest arcade game will make you travel back in the day. Be ready to have fun with this old-school side-shooter game!",
-            "imageCarousel":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/s\/c\/screenshot1_5_4.jpg",
-            "icon":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/2\/0\/2015-02-05_14-37-35.png"
-        },
-        {
-            "type":"app",
-            "sku":"org.ArmyDelivery",
-            "name":"Army Delivery Files",
-            "priceFormatted":"\u20ac0.91",
-            "price":0.91304631,
-            "rating":0,
-            "nbReviews":0,
-            "publisherName":"Mobile Streams",
-            "shortDescription":"Are you ready for the ultimate gaming experience?\r\nAs soon as you download Army Physics Adventure game you will be amazed how much fun it is. \r\nThis is an amazing forever fun game boosted with secret levels and thrilling packed updates. \r\nCan the world bravest soldier succeed on his mission? This adventure game is all about soldier missions. \r\nLt. Gomez is his name, be ready!",
-            "imageCarousel":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/b\/a\/banner_14_1_3.png",
-            "icon":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/i\/c\/icon_27_51.png"
-        }
-    ]
+    "products": [{
+        "type": "app",
+        "sku": "com.cravecreative.eastereggjump",
+        "name": "Easter Egg Jump",
+        "priceFormatted": "\u20ac0.99",
+        "price": 0.9899635446,
+        "rating": 0,
+        "nbReviews": 0,
+        "publisherName": "Crave Creative",
+        "shortDescription": "Guide the baby chick over the Easter eggs to boost him upward.\r\n",
+        "imageCarousel": "http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/e\/a\/easter-egg-jump-1024x500.png",
+        "icon": "http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/e\/a\/easter-egg-jump-icon-512.png"
+    }, {
+        "type": "app",
+        "sku": "org.jymc.spacegame.FeedTheFishy",
+        "name": "Feed The Fishy",
+        "priceFormatted": "\u20ac0.91",
+        "price": 0.91304631,
+        "rating": 0,
+        "nbReviews": 0,
+        "publisherName": "Mobile Streams",
+        "shortDescription": "This a very addictive game, the whole purpose is to help the fishy swim from one point to the other. Energy gets reduced, so you need to eat smaller fishes and other items to boost your energy level.",
+        "imageCarousel": "http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/t\/i\/title_1_30.png",
+        "icon": "http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/i\/c\/icon_30_1_12.png"
+    }]
 }
 ```
 
@@ -219,35 +135,31 @@ compatibility | no | all | If you want to filter the output by device screen com
 
 ```json
 {
-    "products":[
-        {
-            "type":"app",
-            "sku":"com.cravecreative.eastereggjump",
-            "name":"Easter Egg Jump",
-            "priceFormatted":"\u20ac0.99",
-            "price":0.9899635446,
-            "rating":0,
-            "nbReviews":0,
-            "publisherName":"Crave Creative",
-            "shortDescription":"Guide the baby chick over the Easter eggs to boost him upward.\r\n",
-            "imageCarousel":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/e\/a\/easter-egg-jump-1024x500.png",
-            "icon":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/e\/a\/easter-egg-jump-icon-512.png"
-        },
-        {
-            "type":"app",
-            "sku":"org.jymc.spacegame.FeedTheFishy",
-            "name":"Feed The Fishy",
-            "priceFormatted":"\u20ac0.91",
-            "price":0.91304631,
-            "rating":0,
-            "nbReviews":0,
-            "publisherName":"Mobile Streams",
-            "shortDescription":"This a very addictive game, the whole purpose is to help the fishy swim from one point to the other. Energy gets reduced, so you need to eat smaller fishes and other items to boost your energy level.",
-            "imageCarousel":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/t\/i\/title_1_30.png",
-            "icon":"http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/i\/c\/icon_30_1_12.png"
-        }
-        ...
-    ]
+    "products": [{
+        "type": "app",
+        "sku": "com.cravecreative.eastereggjump",
+        "name": "Easter Egg Jump",
+        "priceFormatted": "\u20ac0.99",
+        "price": 0.9899635446,
+        "rating": 0,
+        "nbReviews": 0,
+        "publisherName": "Crave Creative",
+        "shortDescription": "Guide the baby chick over the Easter eggs to boost him upward.\r\n",
+        "imageCarousel": "http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/e\/a\/easter-egg-jump-1024x500.png",
+        "icon": "http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/e\/a\/easter-egg-jump-icon-512.png"
+    }, {
+        "type": "app",
+        "sku": "org.jymc.spacegame.FeedTheFishy",
+        "name": "Feed The Fishy",
+        "priceFormatted": "\u20ac0.91",
+        "price": 0.91304631,
+        "rating": 0,
+        "nbReviews": 0,
+        "publisherName": "Mobile Streams",
+        "shortDescription": "This a very addictive game, the whole purpose is to help the fishy swim from one point to the other. Energy gets reduced, so you need to eat smaller fishes and other items to boost your energy level.",
+        "imageCarousel": "http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/t\/i\/title_1_30.png",
+        "icon": "http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/i\/c\/icon_30_1_12.png"
+    }]
 }
 ```
 
