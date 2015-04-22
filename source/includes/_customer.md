@@ -100,7 +100,7 @@ Code | Meaning
 ```json
 {
     "success": true,
-    "storeId": "1"
+    "storeId": "1",
     "customer": {
         "firstname": "Jonathan",
         "lastname": "Gautheron",
