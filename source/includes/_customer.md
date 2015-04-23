@@ -51,6 +51,7 @@ This endpoint registers a new master account, the consumer & access token are al
 
 Parameter | Mandatory | Default | Description
 --------- | --------- | ------- | -----------
+disableValidation | no | none | Field(s) path(s) that you want validation to ignore ex: `["billingAddress/street", "dob"]`
 email | yes | none | The customer username.
 password | yes | none | Customer password.
 passwordConfirmation | yes | none | Password confirmation.
