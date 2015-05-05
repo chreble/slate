@@ -67,6 +67,7 @@ This endpoint submits a review for the given product.
 
 Parameter | Mandatory | Default | Description
 --------- | --------- | ------- | -----------
+storeId | yes | none | The store ID.
 sku | yes | none | The application SKU.
 rating | yes | none | From 1 to 5.
 title | yes | none | The review title.
