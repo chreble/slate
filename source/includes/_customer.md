@@ -404,3 +404,9 @@ This endpoint retrieves the bought apps.
 ### Auth Required
 
 `YES`
+
+### Request Parameters
+
+Parameter | Mandatory | Default | Description
+--------- | --------- | ------- | -----------
+storeId | yes | none | Store ID on which the user is registered.
