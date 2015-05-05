@@ -36,6 +36,7 @@ This endpoint retrieves a list of reviews for the given product.
 
 Parameter | Mandatory | Default | Description
 --------- | --------- | ------- | -----------
+storeId | yes | none | The store ID.
 sku | yes | none | The application SKU.
 nbItems | no | 10 | If you want to filter the output by device screen compatibility.
 page | no | 1 | If you want to filter the output by device screen compatibility.
