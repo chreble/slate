@@ -123,7 +123,7 @@ This endpoint retrieves a specific block and the products associated to it.
 Parameter | Mandatory | Default | Description
 --------- | --------- | ------- | -----------
 storeId | yes | none | The storeId defines many things, such as the currency, the language, the availability.
-key | yes | none | The featured page key.
+key | yes | none | The featured block key.
 id  | no | none | The featured block id (this one has priority over `key` parameter if passed).
 age | no | all | If you want to filter the output by age range (ex. `0-3`, `3-`)
 compatibility | no | all | If you want to filter the output by device screen compatibility. Must be specified as: `4` = 4-inch, `7` = 7-inch, `10` = 10-inch (comma separated).
