@@ -131,8 +131,6 @@ compatibility | no | all | If you want to filter the output by device screen com
 
 ## Get all products of a given block
 
-<aside class="warning">This resource is deprecated.</aside>
-
 > Response example
 
 ```json
