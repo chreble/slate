@@ -331,75 +331,59 @@ Code | Meaning
 1008 | Passwords don't match
 3008 | Current password does not match entered one
 
-## List of bought apps
+## Inventory
 
 > Response example
 
 ```json
 {
-    "apps": [{
-        "sku": "com.thumbstar.fatty",
-        "name": "Fatty",
-        "priceFormatted": "$1.99",
-        "price": 1.99,
-        "currency": "USD",
-        "packageName": "com.thumbstar.fatty",
-        "apk": "http:\/\/cdn.mobile.nexway.com\/com.thumbstar.fatty-1000005-enc.apk",
-        "apkEncrypted": true,
-        "version": "1000005",
-        "publisherName": "Thumbstar",
-        "rating": 0,
-        "nbReviews": 0,
-        "versionCode": 1000005,
-        "versionLabel": "1.0.5",
-        "order": {
-            "orderId": "600127801",
-            "orderDate": "20140731 15:49:20",
-            "orderTimestamp": 1406821760
-        },
-        "medias": {
-            "image": "https:\/\/appstore.appstore.dev\/media\/catalog\/product\/i\/c\/icon114x114_1.png"
-        },
-        "gameRating": {
-            "age": "3"
-        },
-        "apkHashMac": "2571f0a5a0b847fa3ac7aa2a1841605b67cc3882"
-    }, {
-        "sku": "net.int13.shogun",
-        "name": "Shogun",
-        "priceFormatted": "$1.99",
-        "price": 1.99,
-        "currency": "USD",
-        "packageName": "net.int13.shogun",
-        "apk": "http:\/\/cdn.mobile.nexway.com\/net.int13.shogun-1213-enc.apk",
-        "apkEncrypted": true,
-        "version": "1213",
-        "publisherName": "Thumbstar",
-        "rating": 0,
-        "nbReviews": 0,
-        "versionCode": 1213,
-        "versionLabel": "1.2.13",
-        "order": {
-            "orderId": "600127800",
-            "orderDate": "20140731 15:46:50",
-            "orderTimestamp": 1406821610
-        },
-        "medias": {
-            "image": "https:\/\/appstore.appstore.dev\/media\/catalog\/product\/s\/h\/shogun_114.png"
-        },
-        "gameRating": {
-            "age": "3"
-        },
-        "apkHashMac": "de85162fb0f69a3a36e271dbca3bc3b53832b324"
-    }]
+    "inventory": {
+        "item": [{
+            "sku": "TreaturesUOne",
+            "name": "TreaturesUnlock",
+            "priceFormatted": "€2.99",
+            "price": 2.989996098,
+            "currency": "EUR",
+            "order": {
+                "orderId": "3400000011",
+                "orderDate": "20150518 06:56:16",
+                "orderTimestamp": 1431932176
+            }
+        }],
+        "app": [{
+            "sku": "com.pepworks.pepthedragon",
+            "name": "PEP The Dragon",
+            "priceFormatted": "€1.84",
+            "price": 1.83531531,
+            "currency": "EUR",
+            "order": {
+                "orderId": "3400000012",
+                "orderDate": "20150518 07:20:54",
+                "orderTimestamp": 1431933654
+            },
+            "publisherName": "Pepworks",
+            "packageName": "com.pepworks.pepthedragon",
+            "apk": "http://cdn.mobile.nexway.com/com.pepworks.pepthedragon-1-enc.apk",
+            "apkEncrypted": true,
+            "version": "1",
+            "rating": 0,
+            "nbReviews": 0,
+            "versionCode": 1,
+            "versionLabel": "1.0",
+            "medias": {
+                "image": "http://cdn.mobile.nexway.com/media/catalog/product/i/c/icon_31_5.png"
+            },
+            "apkHashMac": "62038f6dd3410dc3cdd1238b818128bb865303e6"
+        }]
+    }
 }
 ```
 
-This endpoint retrieves the bought apps.
+This endpoint retrieves the items purchased by the customer (apps, in-apps).
 
 ### HTTP Request
 
-`GET https://my.appstore.com/api/account/apps`
+`GET https://my.appstore.com/api/account/inventory`
 
 ### Auth Required
 
