@@ -135,35 +135,26 @@ compatibility | no | all | If you want to filter the output by device screen com
 
 ```json
 {
+    "id": "28",
+    "name": "Top Jeux action",
+    "key": "top-jeux-action",
     "products": [{
         "type": "app",
         "sku": "com.cravecreative.eastereggjump",
         "name": "Easter Egg Jump",
-        "priceFormatted": "\u20ac0.99",
+        "priceFormatted": "€0.99",
         "price": 0.9899635446,
         "rating": 0,
         "nbReviews": 0,
         "publisherName": "Crave Creative",
-        "shortDescription": "Guide the baby chick over the Easter eggs to boost him upward.\r\n",
-        "imageCarousel": "http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/e\/a\/easter-egg-jump-1024x500.png",
-        "icon": "http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/e\/a\/easter-egg-jump-icon-512.png"
-    }, {
-        "type": "app",
-        "sku": "org.jymc.spacegame.FeedTheFishy",
-        "name": "Feed The Fishy",
-        "priceFormatted": "\u20ac0.91",
-        "price": 0.91304631,
-        "rating": 0,
-        "nbReviews": 0,
-        "publisherName": "Mobile Streams",
-        "shortDescription": "This a very addictive game, the whole purpose is to help the fishy swim from one point to the other. Energy gets reduced, so you need to eat smaller fishes and other items to boost your energy level.",
-        "imageCarousel": "http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/t\/i\/title_1_30.png",
-        "icon": "http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/i\/c\/icon_30_1_12.png"
+        "shortDescription": "Guide the baby chick over the Easter eggs to boost him upward.",
+        "imageCarousel": "http://cdn.mobile.nexway.com/media/catalog/product/e/a/easter-egg-jump-1024x500.png",
+        "icon": "http://cdn.mobile.nexway.com/media/catalog/product/e/a/easter-egg-jump-icon-512.png"
     }]
 }
 ```
 
-This endpoint retrieves all the products attached to a block.
+This endpoint retrieves all products associated to a block (with a hard limit of 200 products), it works in combination with the `highlights` representation, `block` and `page` requests being constrained with lesser quantity limits.
 
 ### HTTP Request
 
