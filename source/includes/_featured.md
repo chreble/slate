@@ -75,44 +75,33 @@ compatibility | no | all | If you want to filter the output by device screen com
 
 ```json
 {
-    "id": "28",
-    "name": "Top Jeux action",
-    "key": "top-jeux-action",
-    "representation": "highlights",
-    "options": {
-        "quantityLimit": 5,
-        "showMore": true,
-        "showMoreLimit": 20
-    },
+    "id": "36",
+    "name": "Selection",
+    "key": "selection",
+    "categories": [{
+        "id": "152",
+        "name": "Sélection",
+        "icon": "top"
+    }],
     "products": [{
         "type": "app",
-        "sku": "com.cravecreative.eastereggjump",
-        "name": "Easter Egg Jump",
-        "priceFormatted": "\u20ac0.99",
-        "price": 0.9899635446,
+        "sku": "com.ipc.ipcamera.thom",
+        "name": "Thomview",
+        "priceFormatted": "free",
+        "price": 0,
         "rating": 0,
         "nbReviews": 0,
-        "publisherName": "Crave Creative",
-        "shortDescription": "Guide the baby chick over the Easter eggs to boost him upward.\r\n",
-        "imageCarousel": "http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/e\/a\/easter-egg-jump-1024x500.png",
-        "icon": "http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/e\/a\/easter-egg-jump-icon-512.png"
-    }, {
-        "type": "app",
-        "sku": "org.jymc.spacegame.FeedTheFishy",
-        "name": "Feed The Fishy",
-        "priceFormatted": "\u20ac0.91",
-        "price": 0.91304631,
-        "rating": 0,
-        "nbReviews": 0,
-        "publisherName": "Mobile Streams",
-        "shortDescription": "This a very addictive game, the whole purpose is to help the fishy swim from one point to the other. Energy gets reduced, so you need to eat smaller fishes and other items to boost your energy level.",
-        "imageCarousel": "http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/t\/i\/title_1_30.png",
-        "icon": "http:\/\/cdn.mobile.nexway.com\/media\/catalog\/product\/i\/c\/icon_30_1_12.png"
+        "publisherName": "Avidsen",
+        "shortDescription": "Surveillez à distance via internet, en temps réel, votre habitation.\r\nSoyez averti du moindre mouvement à l’intérieur de votre domicile.\r\nConsultez, quand bon vous semble, ce qu’il se passe chez vous et vérifiez par exemple, que votre enfant est bien rentré de l’école.",
+        "imageCarousel": "https://media.appstore.nexwai.pl/catalog/product/b/a/bandeau-1024x500.png",
+        "icon": "https://media.appstore.nexwai.pl/catalog/product/i/c/icone-thomview512x512.png"
     }]
 }
 ```
 
 This endpoint retrieves a specific block and the products associated to it.
+
+<aside class="info">If the featured products are using one or multiple categories as source, you'll have an additional node called `categories` in the response as seen in the above.</aside>
 
 ### HTTP Request
 
