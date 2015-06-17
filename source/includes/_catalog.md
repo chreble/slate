@@ -6,38 +6,35 @@
 
 ```json
 {
-    "categories": {
-        "3": {
-            "categoryId": 3,
-            "name": "Bøker & Tegneserier",
-            "subCats": {
-                "5": {
-                    "categoryId": 5,
-                    "name": "Childrens Books"
-                }
-            }
-        },
-        "15": {
-            "categoryId": 15,
-            "name": "Utdanning",
-            "subCats": {
-                "16": {
-                    "categoryId": 16,
-                    "name": "Historikk"
-                },
-                "17": {
-                    "categoryId": 17,
-                    "name": "Language (Spoken)",
-                    "subCats": {
-                        "149": {
-                            "categoryId": 149,
-                            "name": "Spanish"
-                        }
-                    }
-                }
-            }
+    "categories": [{
+        "name": "Liquid",
+        "icon": "",
+        "hyperlink": {
+            "type": "page",
+            "id": "liquid"
         }
-    }
+    }, {
+        "categoryId": 152,
+        "name": "Sélection",
+        "icon": "top"
+    }, {
+        "categoryId": 44,
+        "name": "Games",
+        "icon": "games",
+        "subCats": [{
+            "categoryId": 45,
+            "name": "Action",
+            "icon": ""
+        }, {
+            "categoryId": 46,
+            "name": "Adventure",
+            "icon": ""
+        }, {
+            "categoryId": 47,
+            "name": "Arcade",
+            "icon": ""
+        }]
+    }]
 }
 ```
 
@@ -52,6 +49,8 @@ This endpoint retrieves the list of categories available for the given `storeId`
 Parameter | Mandatory | Default | Description
 --------- | --------- | ------- | -----------
 storeId | yes | none | The storeId defines many things, such as the currency, the language, the availability.
+
+<aside class="warning">Some categories are virtual, they don't have a categoryId, in this case they point to a given resource using an hyperlink definition.</aside>
 
 ## Get applications inside category
 
